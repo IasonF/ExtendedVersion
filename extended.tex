@@ -1,321 +1,223 @@
-\documentclass[a4paper,conference]{IEEEtran}
+\documentclass[runningheads,a4paper]{llncs}
 
-\usepackage[utf8]{inputenc}
-\usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{array}
+\usepackage[pdftex]{graphicx}
 \usepackage[cmex10]{amsmath}
-\usepackage{multirow}
 
 
 \begin{document}
+\mainmatter  % start of an individual contribution
 
-\title{Exploration of energy efficient memory organisations for dynamic multimedia applications using scenarios}
-\author{\IEEEauthorblockN{Iason Filippopoulos\IEEEauthorrefmark{1},
-Francky Catthoor\IEEEauthorrefmark{2},
-Per Gunnar Kjeldsberg\IEEEauthorrefmark{1} and
-Others...\IEEEauthorrefmark{3}}
-\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electronics and Telecommunications\\
-Norwegian University of Science and Technology,
-Trondheim, Norway\\ Email: iason.filippopoulos@iet.ntnu.no}
-\IEEEauthorblockA{\IEEEauthorrefmark{2}IMEC, Kapeldreef 75, 3000 Leuven, Belgium\\}
-\IEEEauthorblockA{\IEEEauthorrefmark{3}Holst Centre / IMEC Netherlands, High Tech Campus 31, Eindhoven, The Netherlands\\}}
+% first the title is needed
+\title{Exploration of energy efficient memory organisations for dynamic media applications using system scenarios}
 
+% a short form should be given in case it is too long for the running head
+\titlerunning{System scenarios on memory organisation}
+
+\author{Iason Filippopoulos$ ^{1} $\and Francky Catthoor$ ^{2} $
+\and Per Gunnar Kjeldsberg$ ^{1} $}
+%
+\authorrunning{System scenarios on memory organisation}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+\institute{$ ^{1} $ NTNU, Trondheim, Norway\\
+$ ^{2} $ IMEC, Leuven, Belgium}
+
+\toctitle{}
+\tocauthor{}
 \maketitle
 
 
 \begin{abstract}
-Memory-aware system scenario approach \cite{Fil12} proposes the use of different scenarios, e.g., different memory platform configurations, in order to exploit variations in  memory needs during the lifetime of an application. In this work an extended and highly accurate database including existing state-of-the-art memory models, available both in the industry and academia, is employed during system design exploration phase. The effectiveness of the proposed methodology is demonstrated and tested using a large set of well-known, open multimedia benchmarks published in Polybench, Mibench and Mediabench suites. Reduction in energy consumption on memory subsystem of up to 55\% is shown.
+System scenario methodologies propose the use of different scenarios, e.g., different platform configurations, in order to exploit variations in computational and memory needs during the lifetime of an application. In this paper several extensions are proposed for a system scenario based methodology with a focus on improving memory organisation. The conventional methodology targets mostly execution time while this work aims at including memory costs into the exploration. The effectiveness of the proposed extensions is demonstrated and tested using two real applications, which are dynamic and suitable for execution on modern embedded systems. Reductions in memory energy consumption of 40 to 70\% is shown.
 \end{abstract}
-\IEEEpeerreviewmaketitle
 
 \section{Introduction}
 \label{sec:introduction}
 
-Modern embedded systems are becoming more and more powerful as the semiconductor processing technique keeps increasing the number of transistors on a single chip. Consequentially, demanding applications, such as signal processing and multimedia applications, can be executed on these devices \cite{narasinga}. On the other hand, the desired performance has to be delivered with the minimum power consumption due to the limited amount of power offered in mobile devices \cite{tcm}. System scenario methodologies propose the use of different platform configurations in order to exploit variations in computational and memory needs often seen during the lifetime of such applications \cite{tcm}. 
+Modern embedded systems are becoming more and more powerful as the semiconductor processing technique keep increasing the number of transistors on a single chip. Consequentially, demanding applications, such as medical signal processing and streaming applications, can be executed on these devices \cite{narasinga}. On the other hand, the desired performance has to be delivered with the minimum power consumption due to limited amount of power offered in mobile devices \cite{tcm}. System scenario methodologies propose the use of different platform configurations in order to exploit variations in computational and memory needs often seen during the lifetime of such applications \cite{tcm}. A platform can, e.g., be configured through frequency/voltage scaling or turning certain processing units on or off. In this work a reconfigurable memory platform is employed in order to study the effectiveness of a memory-aware system scenario methodology.
 
-With regard to the memory-aware system scenario methodology, a platform can be reconfigured through power gating techniques used for switching certain memory units on lower power modes when not accessed \cite{Fil12}. In this work such a reconfigurable memory platform is constructed using detailed memory models and some dynamic multimedia applications are employed in order to study the effectiveness of the methodology.
+As shown in \cite{Gonzalez1996} memory contributes around 40\% to the overall power consumption in general purpose systems. Especially for embedded systems, the memory subsystem accounts for up to 50\% of the overall energy consumption \cite{Che09} and the cycle-accurate simulator presented in \cite{Ben99} estimates that the energy expenditures in the memory subsystem range from 35\% up to 65\% for different architectures. According to \cite{tcm}, conventional allocation and mapping of data done by regular compilers is suboptimal. Performance loss is caused by stalls for fetching data and data conflicts for different tasks, due to the limited size of memory and the competition between tasks. In addition, modern applications exhibit more and more dynamism. This gives a strong motivation for study and optimization of memory organisation in embedded devices with strongly dynamic application behaviour.
 
-This paper is organized as follows. Section~\ref{sec:motivation} discusses the motivation for the study of optimizations on memory organisation. Section~\ref{sec:related} surveys related work on system level memory exploration and on system scenario methodologies. The main contribution of the current study in comparison with that work is also presented in section~\ref{sec:related}. Section~\ref{sec:methodology} presents the chosen methodology with main focus on the memory organisation study. In Section~\ref{sec:platform} the target platform is described accompanied a detailed description of the employed memory models, while the multimedia benchmarks and their characteristics are analysed in Section~\ref{sec:applications}. Results of applying the described methodology to the targeted applications are shown in Section~\ref{sec:results}, while conclusions are drawn in Section~\ref{sec:conclusion}. The main contribution of the current work in comparison with \cite{Fil12} is the usage of more accurate and detailed memory models on the system design exploration, the extended number of benchmark applications on which the methodology is applied and the categorisation of applications, based on their dynamic characteristics.
-
-\section{Motivation}
-\label{sec:motivation}
-
-As shown in \cite{Gonzalez1996} memory contributes around 40\% to the overall power consumption in general purpose systems. Especially for embedded systems, the memory subsystem accounts for up to 50\% of the overall energy consumption \cite{Che09} and the cycle-accurate simulator presented in \cite{Ben99} estimates that the energy expenditures in the memory subsystem range from 35\% up to 65\% for different architectures. The breakdown of power consumption for a recently implemented embedded system presented in \cite{Hul11} shows that memory subsystem consumes more than 40\% of the leakage power on the platform. According to \cite{tcm}, conventional allocation and mapping of data done by regular compilers is suboptimal. Performance loss is caused by stalls for fetching data and data conflicts for different tasks, due to the limited size of memory and the competition between tasks. 
-
-In addition, modern applications exhibit more and more dynamism. This dynamism is reflected also on memory resources and techniques have developed in order to estimate the storage size requirements of applications in a systematic way \cite{Ang13}. The significant contribution that the memory subsystem has in the overall energy consumption of a system and the dynamic nature of many applications offer a strong motivation for the study and optimization of memory organisation in modern embedded devices.
+This paper is organized as follows. Section~\ref{sec:related} surveys related work on system level exploration and on system scenario methodologies. Section~\ref{sec:methodology} presents the chosen methodology and our novel extensions to make it applicable in a memory organisation study. In Section~\ref{sec:platform} the target platform is described while the demonstrator applications are presented in Section~\ref{sec:applications}. Results of applying the described methodology to the targeted applications are shown in Section~\ref{sec:results}, while conclusions are drawn in Section~\ref{sec:conclusion}. The main contribution of the current work is the proposal of extensions to the existing system scenario methodology, in order to take into account memory costs while performing the design exploration.  
 
 \section{Related Work and Contribution Discussion}
 \label{sec:related}
 
-Many papers have focused on memory related optimisations, also in the presence of a partitioned and distributed memory organisation with memory blocks of different sizes. In \cite{Ben00b} authors present a methodology for automatic memory hierarchy generation that exploits memory access locality, while in \cite{Ben00c} they propose an algorithm for the automatic partitioning of on-chip SRAM in multiple banks that can be independently accessed. Several design techniques for designing energy efficient memory architectures for embedded systems are presented in \cite{Mac02}. In \cite{Pgk01} data and memory optimization techniques, that could be dependent or independent of a target platform, are discussed . 
-
-However, aforementioned works do not incorporate sufficient support for very dynamically behaving application codes. System scenarios allow to alleviate this bottleneck and to handle such dynamic behaviour. An overview of work on system scenario methodologies and their application are presented in \cite{Gheorghita2007}. In \cite{Fil12} the extensions towards a memory-aware system scenario methodology are presented and demonstrated using theoretical memory models and two target applications. This work is an extension both in complexity and accuracy of the considered memory library and on the number of target applications. 
-
-Furthermore, the majority of the published work focus on control variables for scenario prediction and selection. Control variables can take a relatively small set of different values and thus can be fully explored. However, the use of data variables \cite{Elena2010} is required by many dynamic systems including the majority of multimedia applications. The wide range of possibly values for data variables is higher and makes full exploration impossible. Most of the dynamic variables in the current work can be classified as data variables due to their significant variation under different execution situations. 
+Many papers have focused on memory related optimisations, also in the presence of a partitioned and distributed memory organisation with memory blocks of different sizes (e.g. \cite{Ben00b}, \cite{Ben00c}, \cite{Mac02}, \cite{Pgk01}). However, they do not incorporate sufficient support for very dynamically behaving application codes. System scenarios allow to alleviate this bottleneck and to handle such dynamic behaviour. An overview of work on system scenario methodologies and their application are presented in \cite{Gheorghita2007}. So far memory organisation is rarely considered and not fully analysed. Furthermore, the majority of the published work focus on control variables for scenario prediction and selection. They can take a relatively small set of different values that can be fully explored. However, the use of data variables \cite{Elena2010} is required for these tasks by many dynamic systems with value ranges that make full exploration impossible. 
 
 Authors in \cite{Pal06} present a technique to optimise memory accesses for input data dependent applications by duplicating and optimising the code for different execution paths of a control flow graph (CFG). One path or a group of paths in a CFG form a scenario and its memory accesses are optimized using global loop transformations (GLT). Apart from if-statement evaluations that define different execution paths, they extend their technique to include while loops with variable trip count in \cite{Pal06b}. A heuristic to perform efficient grouping of execution paths for scenario creation is analysed in \cite{Pal07}. However, our work extends the existing solutions towards exploiting the presence of a distributed memory organisation with reconfiguration possibilities.
 
 Reconfigurable hardware for embedded systems, including the memory architecture, is a topic of active research. An extensive overview of current approaches is found in \cite{Garcia}. The approach presented in this paper differentiates by focusing on the data-to-memory partitioning aspects in the presence of a platform with dynamically configurable memory blocks. 
 
-\section{Memory-Aware System Scenario Methodology}
+\section{Extended System Scenario Methodology}
 \label{sec:methodology}
 
-The memory-aware system scenario methodology is based on the observation that the workload on memory subsystem varies significantly on time due to dynamic variation of memory needs in the application code \cite{Fil12}. Most of the existing design methods define the memory requirements of the most demanding task and tune the system in order to meet its needs \cite{tcm}. Obviously, this approach leads to wasted memory area for tasks with lower memory requirements, since those tasks could meet their needs using fewer resources and consequentially consuming less energy. 
+The system scenario methodology is based on the observation that the workload of most systems varies significantly during their lifetime due to dynamic variation of computational and memory needs in the application code. Most of the existing design methods define the worst case execution time (WCET) of the most demanding task and tune the system in order to meet its needs \cite{tcm}. Obviously, this approach leads to wasted time and memory area for tasks with lower execution time and memory requirements, since those tasks could meet their needs using fewer resources and consequentially consuming less energy. 
 
 In contrast, designing with scenarios is workload adaptive and offers different configurations of the platform and the freedom of switching to the most efficient scenario at run-time. In contrast to use case scenario approaches in which scenarios are generated based on a user's behaviour, the system scenario methodology focuses on behaviour of the system to generate scenarios. A system scenario is a configuration of the system that combines similar run-time situations (RTSs). An RTS consists of a running instance of a task and its corresponding cost (e.g. energy consumption) and one complete run of the application on the target platform represents a sequence of RTSs \cite{Elena2010}. The system is configured to meet the cost requirements of an RTS by choosing the appropriate scenario, which is the one that satisfies the requirements using minimal power.
 
-In the following subsections, the different steps of the memory-aware system scenario methodology are outlined. A more detailed presentation of system scenario methodology and its extensions to make it applicable in a memory organisation study can be found in \cite{Fil12}.
+In the following subsections, the different steps of the system scenario methodology is outlined, with emphasis on the new extensions that make it possible to take memory into account. 
 
-\subsection{General Description of Memory-Aware System Scenario Methodology}
+\subsection{General description of system scenario methodology}
 
-The scenario methodology follows a two stage exploration, namely design-time and run-time stages, as described in \cite{Gheorghita2007}, which is also employed in the memory-aware extension of the methodology \cite{Fil12}. The two stage exploration is chosen because it reduces run-time overhead while preserving an important degree of freedom for run-time configuration \cite{tcm}. In more detail, the application is analysed at design-time and different execution paths causing variations in memory demands are identified. This procedure, which is time consuming and as a result can be performed only during the design phase, will result in a grey-box model representation of the application. The grey-box model hides all static and deterministic parts of the application, by providing only related memory costs for those, and keeps parts of the application code that are non-deterministic in terms of memory usage available to the system designer \cite{graybox}. 
+The scenario methodology follows a two stage exploration, namely design-time and run-time stages, as described in \cite{Gheorghita2007}. The two stage exploration is chosen because it reduces run-time overhead while preserving an important degree of freedom for run-time configuration \cite{tcm}. In more detail, the application is analysed at design-time and different execution paths and variations in processing and memory demands are identified. This procedure, which is time consuming and as a result can be performed only during the design phase, will result in a grey-box model representation of the application. The grey-box model hides all static and deterministic parts of the application, by providing only related costs for those, and keeps parts of the application code that are non-deterministic available to the system designer \cite{graybox}. This way, more focus can be given to parts of the application that have impact on the cost variations so that different execution decisions can be studied. Those different options are made available to the system designer and each decision could be either fixed at design time or forwarded for dynamic evaluation at run-time.
 
 \subsection{Design-time Profiling}
 
+Application profiling is performed at design-time and consists of an analysis of the target application during its lifetime and for a wide range of inputs. The analysis focuses on execution time for a reference processor in the conventional system scenario methodology, but in our case the cost will be memory size. This cost metric is chosen, because several applications allocate and deallocate memory space during their execution. Also, data reuse behavior and decisions made by the system designer about the size of sets of data to be copied to different units in the memory hierarchy (i.e., copy-candidates \cite{dtse}) strongly influences the memory size. Energy consumption and access time of a memory unit is affected by its size \cite{patterson}. Together with access pattern information, the memory size is hence an important metric.
+
+The flow of the profiling stage is depicted in Fig.~\ref{fig:profiling} and consists of running the application code with suitable input data often found in a database, in order to produce profiling results. This reveals parts of the application code with high memory activity and with varying memory access intensity, which possibly depends on input data. Because of this behaviour, a static study of the application code alone is insufficient since the target applications for this methodology have non-deterministic behaviour that is driven by input. Choosing an extensive and accurate database is vital and will heavily influence and steer the designer's decisions in later steps.
+
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.45\textwidth]{profiling.eps}
+\includegraphics[width=2.5in]{profiling_v2.eps}
 \caption{Profiling results based on application code and input data.}
 \label{fig:profiling}
 \end{figure}
 
-Application profiling is performed at design-time and consists of an analysis of the target application during its lifetime and for a wide range of inputs. The analysis focuses on the allocated memory size during execution and the variation in access pattern of the application. Several applications dynamically allocate and deallocate memory space during their execution, based both on the source code and the given input. 
+Given code and database as inputs, profiling will show memory usage during execution time by running the application using the whole database as an input. Results provided to the designer include complete information about allocated memory size values together with the number of occurrences and duration for each of these memory size values. Moreover, correlation between input data values and the resulting memory behaviour can possibly be observed. This information is forwarded to the next stage.
 
-The profiling stage is depicted in Fig.~\ref{fig:profiling} and consists of running the application code with suitable input data often found in a database, in order to produce profiling results. This reveals parts of the application code with high memory activity and with varying memory access intensity, which possibly depends on input data. Because of this behaviour, a static study of the application code alone is insufficient since the target applications for this methodology have non-deterministic behaviour that is driven by input. Choosing an extensive and accurate database is vital and will heavily influence and steer the designer's decisions in later steps. 
+There are several ways that profiling can be performed. Current program monitoring software cannot offer the needed level of detail. Debuggers and memory tools, such as Valgrind \cite{Valgrind}, or direct hard-coded profiling are preferable methods, because of their higher accuracy.
 
-Given code and database as inputs, profiling will show memory usage during execution time by running the application using the whole database as an input. Results provided to the designer include complete information about allocated memory size values together with the number of occurrences and duration for each of these memory size values. Moreover, correlation between input data values and the resulting memory behaviour can possibly be observed. 
+\subsection{Design-time Scenario Identification and Prediction}
 
-In Fig.~\ref{fig:profiling} the profiled applications are two image related multimedia benchmarks and the input database should consist of a variety of images. The storage requirements in each case are driven by the current input image size. 
+Scenario generation is also performed during design time and is the procedure of clustering profiled information into groups with similar characteristics. More precisely, cost points are clustered in groups based on their distance in cost axis and the frequency of their occurrence. Clustering is necessary, because it will be extremely costly to have a different scenario for every possible situation. Switching cost, which is the cost of switching platform to another configuration, for example by turning a memory to retention state, grows with the number of scenarios, because more scenarios result in more frequent switching. In addition, the runtime manager becomes more complex with an increasing number of scenarios.
 
-\subsection{Design-time Scenario Generation and Prediction}
+As shown in Fig.~\ref{fig:clustering}, using the information available after application profiling, situations with similar platform needs will be organised in a common scenario. This is known as clustering of RTSs \cite{Gheorghita2007}. This is a rational choice, because two instances with similar platform needs have similar memory energy consumption. The energy gain of having two dedicated scenarios is small and normally outweighed by switching costs if organized in different scenarios. In this example, clustering results in three different scenario areas (Fig.~\ref{fig:clustering}) and the execution scenario sequence is 1(lower), 2(middle), 3(top), 2, 3 and 1. Also, the frequency of occurrence of each instance is an important factor in scenario generation. Instances with higher frequencies normally have their dedicated scenario, to allow higher optimization, while less common instances can be clustered together in a less optimal scenario. 
+
+In order to generate scenarios that can be implemented in realistic memory organisations, a detailed library with memory components is needed. The library should contain a variety of memory models, including different technologies and sizes, and is used to calculate scenario costs. In this work the component library is based on memory models published in \cite{Artes2011}.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.40\textwidth]{clustering.eps}
-\caption{Clustering of profiling results into different number of scenarios}
+\includegraphics[width=2.5in]{clust1.eps}
+\caption{Scenario generation based on profiling information and memory models.}
 \label{fig:clustering}
 \end{figure}
 
-The next step is the clustering of profiled memory sizes into groups with similar characteristics, which is referred as scenario generation \cite{Fil12}. Clustering is necessary, because it will be extremely costly to have a different scenario for every possible size, due to the amount of memories needed. Clustering neighbouring RTSs is a rational choice, because two instances with similar memory needs have similar energy consumption. 
+The design-time scenario prediction phase consists of determination of the variables that define the active scenario. This can be achieved by careful study of the application code, combined with the application's data input. In our case the grey-box model reveals only the code parts that will influence memory usage, so that variables deciding memory space changes can be identified. An example of this is a non static variable that influences the number of iterations for a loop that performs one memory allocation at each iteration. Moreover, the designer should look for a correlation between input values and the corresponding cost. This information will be useful in the following steps of the methodology \cite{tcm}.
 
-In Fig.~\ref{fig:clustering} the clustering of the previously profiled information is presented. The clustering of RTSs is based both on their distance in memory size axis and the frequency of their occurrence. Consequentially, the memory size is split unevenly with more frequent RTSs having a shorter memory size range. The energy cost of each scenario is defined by the upper size limit, as each scenario should support all RTSs within its range.
+\subsection{Run-time Identification, Detection, and Switching}
 
-The design-time scenario prediction phase consists of determination of the variables that define the active scenario. This can be achieved by careful study of the application code, combined with the application's data input. In our case the grey-box model reveals only the code parts that will influence memory usage, so that variables deciding memory space changes can be identified. An example of this is a non static variable that influences the number of iterations for a loop that performs one memory allocation at each iteration. In the depicted example the scenario prediction variable is the input image height and width values. Moreover, the designer should look for a correlation between input values and the corresponding cost. This information will be useful in the following steps of the methodology \cite{tcm}.
-
-\subsection{Run-time}
+After profiling and scenario generation at design-time, all the necessary information needed for run-time management is available. The run-time manager monitors the current values of prediction variables selected in the previous design time step. Based on this, prediction of the next active scenario is performed  \cite{tcm}. 
 
 Switching decisions will be taken at run-time by the run-time manager. The switching phase consists of all platform configuration decisions that can be made at run-time, e.g., frequency/voltage scaling, turning on/off a memory unit, and remapping of data on memory units. Switching takes place when the switching cost is lower than the energy gains achieved by switching. In more detail, the run-time manager compares the memory energy consumption of executing the next task in the current active scenario with the energy consumption of execution with the optimal scenario. If the difference is greater than the switching cost, then scenario switching is performed \cite{tcm}. Switching costs are defined by the platform and include all memory energy penalties for run-time reconfigurations of the platform, e.g., extra energy needed to change state of a memory unit.
-
-\begin{figure}[!t]
-\centering
-\includegraphics[width=0.45\textwidth]{runtime.eps}
-\caption{Runtime scenario prediction and switching based on the current input}
-\label{fig:runtime}
-\end{figure}
-
-In Fig.~\ref{fig:profiling} an example of the run-time phase of the methodology is depicted. Runtime manager identifies the size of the image that will be processed and reconfigures the memory subsystem on the platform, if needed, by increasing or decreasing the available storage size. The reconfiguration options are effected by platform hardware limitations.
 
 \section{Target Platform}
 \label{sec:platform}
 
-Selection of target platform is an important aspect of the memory-aware system scenario methodology \cite{Fil12}. The key feature needed in the platform architecture is the ability to efficiently support different memory sizes that correspond to the scenarios generated by the methodology. Execution of different scenarios then leads to different energy costs, as each configuration of the platform results in a specific memory energy consumption. The dynamic memory platform is achieved by organising the memory area in a varying number of banks that can be switched between different energy states. 
-
-\subsection{Architecture}
-
-In this work, a clustered memory organisations with up to five memory banks of varying sizes is explored. The limitation in the number of memory banks is necessary in order to keep the interconnection cost between the PE and the memories constant through exploration of different architectures. For more complex architectures the interconnection cost should be considered and analysed separately for accurate results. Although power gating can be also applied to the bus when only a part of a longer bus is needed, an accurate model of the memory wrapper and interconnection must developed, which is beyond the scope of the current work. 
-
-An example of the exploration of the memory platform is shown in Fig.~\ref{fig:platform}. In the simple architectures under exploration point-to-point connections between elements are assumed and the interconnection cost is kept negligible for up to five memory banks.
+Selection of target platform is an important aspect of the memory-aware system scenario methodology. The key feature needed in the platform architecture is the ability to realize different scenarios generated by the methodology. Execution of different scenarios then leads to different energy costs, as each configuration of the platform results in a specific memory energy consumption. In the conventional system scenario methodology several platform reconfiguration options have been studied \cite{Gheorghita2007} with dynamic voltage/frequency scaling (DVFS) most used \cite{dvfs}. By using DVFS techniques, one can change the frequency of the processing element and its supply voltage and energy consumption accordingly. For a memory aware scenario methodology there are multiple ways that memory reconfiguration can be performed. E.g., data can be mapped to different memory units according to size and access frequency, memory units can be turned on or off, or DVFS can be used to allow exactly the access frequency currently needed. 
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.5\textwidth]{platform.eps}
-\caption{Exploration of memory clustering into varying number of banks}
+\includegraphics[width=2.2in]{platform_v6.eps}
+\caption{Target platform with focus on memory organisation.}
 \label{fig:platform}
 \end{figure}
 
-\subsection{Models}
+In this paper we have selected a relatively conventional reconfigurable architecture template that is suitable for implementing system scenarios as shown in Fig.~\ref{fig:platform}. This dynamic memory organisation is based on memory prototypes presented in \cite{Artes2011}, and consists of two software controlled SRAM scratchpad memories, L1 and L1', and a processing element with its registers. For simplicity it is assumed that all data needed during execution is available in the L1 scratchpad memory without any time penalties even when large background memories are used. This assumption is reasonable for the kind of applications that are generally executed in embedded systems and can, e.g., be achieved through prefetching. The methodology is in general not restricted to this assumption, however, and can handle more complex hierarchical memory architectures, also including regular caches. Registers are used to save currently used elements, and between the registers and the L1 scratchpad a much smaller L1' scratchpad is introduced. This is a clustered memory that consists of four memory banks that support three different states (on, off and retention modes) \cite{Artes2011}. 
 
-The dynamic memory organisation is constructed using commercially available macro SRAM memory models (MM). In addition, experimental standard cell-based memories (SCMEM) \cite{Mei11}  are  considered for smaller memories due to their energy and area efficiency for reasonably small storage capacities, as argued in \cite{Mei10}. Both MMs and SCMEMs can operate under a wide range of supply voltages, thus support different operating modes that provide an important exploration space.
+The memory energy consumption for every access in the clustered scratchpad memory is calculated based on the current situation of the platform as shown in Fig.~\ref{fig:platform}. The leakage energy estimation is also provided in \cite{Artes2011} and is included in our study. In Tab.~\ref{tab:leakage} the leakage and wake up costs for all different operation modes are presented. The leakage in L1' is small compared to L1 and constant, thus the effect in the results is minimal.
 
-\begin{itemize}
-\item Active mode: The normal operation mode, in which the memory can be accessed in the maximum supported speed. The supply voltage is 1.1V and it is expected that the dynamic and leakage power are higher compared to the other modes.
-\item Light sleep mode: The supply voltage in this mode is lower than active with values in the area of 0.7V. The access time of the memory in that mode is expected much higher than the access time on active mode. Switching to active mode can be performed with a small time penalty of a few clock cycles, less than 10, and all the data are retained.  
-\item Deep sleep mode: The supply voltage is set to the lower possible value that can be achieved without loss of data. This voltage threshold is expected to be lower for SCMEMs than MM models and can be as low as 0.3V. The amount of clock cycles needed for switching to active mode is higher compared to sleep mode. Consequentially, the speed of the PE and the real-time constrains of the applications has to be taken into consideration for deciding, if light or deep sleep mode should be chosen at a specific time.  
-\item Shut down mode: Power-gating techniques result to near zero leakage power and retaining of stored data is impossible in this mode. The switch to active mode needs a higher energy and takes more time. However, switching unused memories to this mode, providing that the containing data will not be reused in the future, results to important energy gains.
-\end{itemize}  
+\begin{table}[!t]
+\centering
+\caption{Energy costs per second and access for a reference memory bank (size: 120 bytes, technology: 90nm) in clustered L1' memory }
+\label{tab:leakage}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+Modes & Leakage [J] & Wake up [J] & Access [J]\\ 
+\hline 
+On & $351,86 \times 10 ^{-6}$ & - & -  \\ 
+\hline 
+Off & $ 4,73 \times 10 ^{-6}$ & $ 2,77 \times 10 ^{-12}$ & -\\ 
+\hline 
+Retention & $ 97,33 \times 10 ^{-6}$ & $ 2,2 \times 10 ^{-12}$ & -\\ 
+\hline 
+DFF synch & - & - & $ 0.227 \times 10 ^{-6}$\\ 
+\hline
+DFF asynch & - & - & $ 2.18 \times 10 ^{-6}$\\ 
+\hline 
+Nand2 & - & - & $ 0.334 \times 10 ^{-6}$\\ 
+\hline
+\end{tabular}      
+\end{table}
 
-The necessary energy/power information is available to the system designer and relative values for some of the used sizes in the current work are presented in Tab.~\ref{tab:relative}. It is clearly shown that the choice of the memory units has an important impact on the energy consumption. Moreover, different decisions have to be made based on the dominance of the dynamic or the leakage energy in a specific application. In the current work all memory architectures with up to 5 memory units are explored and the optimal configuration is chosen.
-
-The methodology is in general not restricted to specific memory types or benchmarks and can handle more complex hierarchical memory architectures and applications. However, in this study the chosen applications have a relatively small storage requirement limited to around 100KB, which is the case for many applications run on modern embedded systems. 
-
-\begin{center}
-	\begin{table*}[!t]
-	\caption{Relative energy for a range of memories with varying capacity and type}
-	\label{tab:relative}
-	{\small
-	\hfill{}
-	\begin{tabular}{|c|c|c|c|c|c|c|}
-		\hline
-		\multirow{2}{*}{\textbf{Type}} & \multirow{2}{*}{\textbf{Lines x wordlength}} & \textbf{Dynamic Energy}& \multicolumn{4}{c|}{\textbf{Static Leakage Power per Mode}}\\ \cline{3-7}
-		& & Read & Active & Light-sleep & Deep-sleep & Shut-down \\ 
-		\hline 
-		MM & 32 x 8 &  $ 4.18 \times 10^{-8} $ & 0.132 & 0.125 & 0.063 & 0.0016\\ 
-		\hline
-		MM & 32 x 16 & $  6.79 \times 10^{-8} $ & 0.134 & 0.127 & 0.064 & 0.0022\\ 
-		\hline
-		MM & 32 x 128 & $  4.33 \times 10^{-7} $ & 0.171 & 0.160 & 0.083 & 0.0112\\ 
-		\hline
-		MM & 256 x 128 & $  4.48 \times 10^{-7} $ & 0.207 & 0.184 & 0.104 & 0.0293\\ 
-		\hline
-		MM & 1024 x 128 & $  5.11 \times 10^{-7} $ & 0.349 & 0.283 & 0.189 & 0.102\\ 
-		\hline
-		MM & 4096 x 128 & $  9.60 \times 10^{-7} $ & 0.95 & 0.708 & 0.544 & 0.396\\ 
-		\hline
-		SCMEM & 128 x 128 & $  2.5 \times 10^{-7} $ & 0.083 & 0.057 & 0.027 & 0.0022\\ 
-		\hline
-		SCMEM & 1024 x 8 & $  1.7 \times 10^{-8} $ & 0.042 & 0.028 & 0.014 & 0.0011\\ 
-		\hline
-	\end{tabular}}
-	\hfill{}
-	\\
-	\end{table*}
-\end{center}
-
-\subsection{Energy consumption calculation}
-
-A cycle accurate simulator that supports the described reconfigurable custom memory organisations is not existing and the development of such a simulator is beyond the scope of this work.  Instead the overall energy consumption for each configuration is calculated using a detailed formula, as can be seen in (\ref{eq:energy}). 
-
-\setlength{\arraycolsep}{0.0em}
-\begin{eqnarray}
+The memory energy consumption per read access is given by Equation ~\ref{eq:energy}, which is provided by the memory models in \cite{Artes2011}.    
+\begin{multline}
+Read \: energy = (size \: of \: bank) \times (DFF \: sync)+ \\ + \dfrac{bank \: lines}{log2} \times DFF \: async + 4 \times size \times Nand2 
 \label{eq:energy}
- E &{}= {}&\sum\limits_{memories}^{all}  ( N_{rd_{acc}} \times E_{Read} \nonumber\\
-		&&+ N_{wr_{acc}} \times E_{Write} \nonumber\\
-		&&+ (T - T_{Sleep}) \times P_{leak_{Normal}} \nonumber\\
-		&&+ T_{Sleep} \times P_{leak_{Sleep}} \nonumber\\ 
-		&& + N_{SW} \times E_{SleepNormal}
-\end{eqnarray}
-\setlength{\arraycolsep}{5pt}
-
-All the important transactions on the platform that contribute to the overall energy are included, in order to achieve as accurate results as possible. In particular:
-\begin{itemize}
-\item $N_{rd_{acc}}$ is the number of read accesses
-\item $E_{Read}$ the energy per read
-\item $N_{wr_{acc}}$ is the number of write accesses 
-\item $E_{Write}$ the energy per write that is higher in general to the energy per read 
-\item T the execution time of the application
-\item $T_{Sleep}$ the time spent in sleep state
-\item $P_{leak_{Normal}}$ is the leakage power on the active mode 
-\item $P_{leak_{Sleep}}$ is the leakage power on the sleep mode with different values corresponding on each sleep mode 
-\item $N_{SW}$ the number of transitions from one state to another
-\item $E_{SleepNormal}$ the energy for changing states
-\end{itemize}
-
- The overall energy consumption is given after calculating the energy for each memory bank. The execution time of the application is needed for calculating the actual time of leakage, while memory subsystem is on. Execution time and can be given by execution of application's code on a reference embedded processor.   
+\end{multline}
+The cost of accessing the clustered scratchpad organisation is a function of the overall size of the cluster and the size of the specific bank being accessed. In addition, there is a contribution in energy consumption per access added by the flip-flops and the gates needed for the correct operation of the L1' memory organisation.
  
 \section{Application Benchmarks}
 \label{sec:applications}
 
-\begin{center}
-\begin{table*}[!t]
-\caption{Benchmark applications overview}
-\label{tab:applications}
-{\small
-\hfill{}
-\begin{tabular}{|c|c|c|}
+The extended methodology will be tested on two representative real life applications that differentiate significantly from each other and cover different domains of applications. The first one is a computational intensive application, in which the code is dominated by loops with dynamic bounds determined by results calculated inside the loop. The second has a more static execution path, but its memory footprint is dynamically defined by the input data. Ideal applications, that can most benefit from memory-aware system scenario methodology, are applications that have dynamic behaviour in memory organisation utilization during their execution. That required dynamism could be produced by several code characteristics, covering a wide range of potential application domains for the proposed methodology.
+
+\subsection{Epileptic Seizure Predictor}
+
+An epileptic seizure predictor algorithm developed at Arizona State University (ASU) \cite{Iasemidis2005} is chosen as a benchmark, along with a database with measurements performed on real patients, also provided by ASU. Up to now the algorithm has only been used in clinical environments using PCs, although it would be very helpful for patients as an embedded device, as part of outpatient care. Dynamic input data dependent behaviour is identified in the algorithm and memory traces for execution of three different input samples are presented in Fig.~\ref{fig:eegprof}. For each data sample a loop is iterated 168 times. Depending on the input data sample, different memory elements are accessed in each iteration. Note that even though the element accessing for all three samples are drawn together in the figure, only one set of memory elements are accessed for each data sample and only one data sample is processed at a time. Because of the nature of the EEG signal used for the epileptic seizure prediction the benchmark has variables with a very wide range of potential values. The memory usage is heavily influenced by these input values. For demonstration purposes our study focuses on the parts of the prediction algorithm that is most dynamic. In \cite{Elena2010} the algorithm is split in thread nodes and dynamic behaviour affecting execution time is identified. The data reuse size for each sample in Fig.~\ref{fig:eegprof} contains all the elements with data reuse factor greater than 1, i.e., are read more than once. They should be saved in L1'. For example, elements in index range from roughly 3300 to 7200 for sample 1 form an approximately 3900$ \times $(element size bytes) L1' memory size requirement. These elements are read for the first time between loop iteration 0 and 50 and are also re-read later during the sample's lifetime between loop iteration 120 and 170. In Fig.~\ref{fig:eegprof} these memory elements are included in the red rectangle. The exact L1' sizes needed for processing of sample 1, 2, and 3 are 3899, 2646, and 3780, respectively.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=3.4in]{eegprof.eps}
+\caption{Memory access pattern of epilepsy predictor. Profiling of data reuse size for 3 samples from a given (\cite{Iasemidis2005}) database. The number of elements accessed is input dependent. Only those of the 16K elements accessed multiple times should be saved in L1'. The rest are accessed from L1.}
+\label{fig:eegprof}
+\end{figure}
+
+Based on profiling results, scenario generation can be performed. Two possible clustering solutions are used in this paper, both of them consisting of five scenarios. In the first clustering, the range of memory indexes is split in equally sized partitions.  In the second clustering, the range is split based on occurrence frequency, so that each scenario has almost equal number of occurrences. The reconfigurable memory platform is instantiated accordingly in our target template outlined in Section \ref{sec:platform}. It contains four equal memory banks of size 975 in the first case and four banks of increasing size (195, 585, 1170, and 1950) in the second case, since smaller sizes are used more often. 
+
+\subsection{Viterbi Algorithm Encoder}
+
+The Viterbi algorithm \cite{viterbi} is widely used, both in the industry and academia, as an encoding/decoding algorithm for convolutional codes. As part of the encoding of the transmitted signal, redundant bits are added, which are later used by the decoder for correction of transmission errors. The output of an encoder is a function of current input bit(s) and K earlier inputs, where K is the constraint length of the algorithm. Profiling shows that the constraint length dominates the memory cost.  In Tab.~\ref{tab:snr} \cite{avd} constraint length values to achieve $ 10^{-5} $ BER are presented for different noise levels in the channel. Due to its limited range of values, the constraint length is classified as a control variable. The scenario generation is based on profiling and aims at achieving a consistent bit error rate with the minimum memory usage. If SNR decreases, another memory bank is activated while reduction in channel noise leads to the opposite effect. The L1' sizes can be found in Tab.~\ref{tab:snr}. Clustering has been performed for K-values 5 and 6, with a resulting L1' size of 48B, and between K-values 8 and 9, with a resulting L1' size of 72B
+
+\begin{table}[!t]
+\caption{Constraint length for SNR levels on the channel (BER $ \leqslant 10^{-5} $)}
+\label{tab:snr}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline 
-\textbf{Application} & \textbf{Dynamic variable} & \textbf{Memory size variation (Bytes)} \\ 
+SNR (dB) & K & L1' size (B) & SNR (dB) & K & L1' size (B) \\ 
 \hline 
-Epic image compression & Image size & 4257 - 34609\\ 
+6,5 - 6,1 & 5 & 40 & 3,9 - 3,1 & 9 & 72 \\ 
 \hline 
-Motion Estimation & Image size & 4800 - 52800 \\ 
+6,1 - 5,5 & 6 & 48 & 3,1 - 2,8 & 12 & 96 \\ 
 \hline 
-Blowfish decoder & Input file size & 256 - 5120 \\ 
+5,5 - 3,9 & 8 & 64 & 2,8 - 2,5 & 14 & 112 \\ 
 \hline 
-Jacobi 1D Decomposition & Number of steps & 502 - 32002 \\ 
-\hline 
-Mesa 3D & Loop bound & 5 - 50000 \\ 
-\hline 
-JPEG DCT & Block size & 10239 - 61439 \\ 
-\hline 
-PGP encryption & Encryption length & 3073 - 49153 \\ 
-\hline 
-Viterbi encoder & Constraint length & 5121 - 14337 \\ 
-\hline 
-\end{tabular}}
-\hfill{}
-\\
-\end{table*}
-\end{center}
-
-Ideal applications, that can most benefit from memory-aware system scenario methodology, are applications that have dynamic behaviour in memory organisation utilization during their execution. Multimedia applications often exhibit such a dynamic variation on storage requirements during their lifetime and consequentially are suitable candidates for the presented methodology. The effectiveness is demonstrated and tested using a variety of open multimedia benchmarks, which can be found in Polybench (\cite{Poly}), Mibench (\cite{mibench}) and Mediabench(\cite{mediabench}) benchmark suites. Execution of multimedia applications on embedded systems is growing and therefore there is a strong motivation for their study.
-
-\subsection{Presentation of multimedia benchmark applications}
-
-An overview of the benchmark applications that were tested is presented in Tab.~\ref{tab:applications}. Two key parameters under consideration are the dynamic variable on each application and the variation in the storage requirements. The dynamic variable is the variable that results in different scenarios due to its range of values. Examples of such a variable are an input image of varying size or a loop bound with a non-fixed value. The memory size limits are defined as the minimum and maximum storage requirement occurred during testing of application.
-
-\textit{EPIC (Efficient Pyramid Image Coder) image compression} is an algorithm used for compressing an image that can compress all possible sizes of images. The size of the input image has an effect on memory requirements during compression and several images were given as inputs. \textit{Motion estimation} is another media application in which image size is the dynamic variable. In this case the image defines the area that has to be explored for determining the motion vectors and different images are tested.
-
-Dynamism in \textit{blowfish decoder} benchmark is a result of the variations in the input file that is decoded. Again, the methodology explores the behaviour for several input files in order to identify scenarios. \textit{Jacobi 1D decomposition} algorithm can be executed for a varying number of steps with a straight effect on memory usage and so is another suitable benchmark for applying the system scenario methodology. \textit{Mesa 3D} is an open graphics library with a dynamic loop bound in its kernel that provides the desired dynamic behaviour. 
-
-The discrete cosine transformation (DCT) block used on \textit{JPEG compression} algorithm has a memory footprint that is heavily influenced by the block size. The \textit{PGP encryption} algorithm is also included in the employed benchmark suites and its encryption length parameter has an important impact on storage size, that can be exploited using system scenarios. The effect of the SNR level on the channel on the constraint length value on \textit{Viterbi encoder} algorithm is discussed on \cite{Fil12}. The increment of noise in the channel demands a more complex encoding in order to maintain a constant bit error rate (BER), which consequentially increases the memory requirements during algorithms execution. The memory size variation is given for execution under different SNR levels.  
-
-%Meta-scenarios
-\subsection{Categorisation of applications based on basic characteristics}
-\label{sec:categorisation}
-The required dynamism for applying the memory-aware system scenario methodology could be produced by several code characteristics, covering a wide range of potential application, as discussed on the previous subsection. Another contribution of this work is the categorization of applications based on their characteristics. It is useful to identify basic characteristics that could lead the system designer towards the employment of the methodology and reveal the expected behaviour prior to experimentation with an application. The basic characteristics that are used to categorize the applications are the storage size bounds and the variance of cases within storage size limits.
-
-The storage bounds correspond to the minimum and maximum memory size values profiled over all possible cases. In general, an increment on upper bound could increase the possibilities for energy gains. This is a result of using larger and more energy hungry memories in order to support the high storage requirements for the worst case and energy gains are expected in other cases where those memories can be switched into retention for a long time. The group of benchmarks with upper storage size close to 50KB are JPEG, motion estimator, mesa 3D and PGP. On the other hand, system designer should expect lower energy gains for applications that have relatively smaller demands for the maximum memory size. Two good examples are blowfish and viterbi algorithms. 
-
-The second metric used for identification of different kinds of dynamism is the variation on memory requirements. The variation takes into consideration both the number of different cases that are present within the storage requirement limits and the distribution of those cases on the space between minimum and maximum memory size. Applications with a limited number of different cases are expected to have much smaller energy gains after a number of platform supported scenarios have been reached. This happens because after a point most of the cases are already optimised for one of the platform configurations and adding new configurations have a minimal impact.
-
-The opposite behaviour is expected for applications that feature a wide range of cases and a good distribution that covers the space between maximum and minimum memory size.
-
+\end{tabular}      
+\end{table}
+ 
 \section{Results}
 \label{sec:results}
 
-The memory aware system scenario methodology is applied to all the presented benchmark applications to study its effectiveness. The profiling phase is based on different input for the dynamic variables shown in Tab.~\ref{tab:applications} and is followed by the clustering phase. The clustering is performed starting from one and for up to five scenarios. All potentially energy efficient configurations are tested for a given number of scenarios. The exploration includes memories of different sizes, technologies and varying word lengths. 
+The memory aware system scenario methodology is applied to both of our benchmark applications to study its effectiveness. Memory energy consumption is calculated based on \cite{Artes2011} and is the sum of (energy per access) $ \times $ (number of accesses) and energy costs for all transitions between memory modes. The energy for each access is defined by the type and the size of the accessed memory. Based on profiling and scenario generation results, four different memory organizations are compared for the epileptic seizure predictor. The first one is a scenario strategy without memory awareness and use a single memory bank large enough to satisfy the most demanding sample. That approach is the worst case for the memory size and statically allocates the highest value of the memory space demanded during the lifetime of the application, i.e., 3900. However, the number of accesses to the memory will be determined by each sample and no worst case assumption is made for number of accesses.
 
-The normalized energy consumption is shown in Fig.~\ref{fig:energy} while the energy gain percentages compared to a platform configuration with only 1 scenario are presented in Fig.~\ref{fig:gains}. Only the optimal configuration is presented for each scenario value. The energy is normalized for each application separately. Gains are reported compared to the case of the fixed non-re-configurable platform (1 scenario).
+The second approach assumes that L1' has four banks of the same size (975) that can be turned on and off. The third one assumes an L1' with four banks with different sizes (195, 585, 1170, and 1950), in order to better exploit RTSs with small memory footprints.  Finally, a theoretical lower bound assumes an unlimited number of memory banks in all sizes to optimally exploit every situation. Comparison results are shown in Fig.~\ref{fig:gainsEEG} and memory energy gains up to 40\% are achieved with the scenario methodology for dynamic input samples. The high quality of our results is substantiated by the fact that our energy consumption is very close to the theoretical lower bound, even though the latter is impossible due to limited area in embedded devices.  
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.5\textwidth]{6apps.eps}
-\caption{Energy consumption per number of memory banks - Energy is normalized per application}
-\label{fig:energy}
+\includegraphics[width=3in]{results1.eps}
+\caption{Memory-aware scenario gains - Epileptic seizure predictor}
+\label{fig:gainsEEG}
 \end{figure}
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.5\textwidth]{6appsGains.eps}
-\caption{Energy gain for increasing number of scenarios - 1 scenario corresponds to 0\%}
-\label{fig:gains}
+\includegraphics[width=3in]{res2.eps}
+\caption{Memory-aware scenario gains - Viterbi encoder}
+\label{fig:gainsViterbi}
 \end{figure}
 
-The introduction of a second scenario results to energy gains between 15\% and  40\%  for the tested applications. Depending on application's dynamism the maximum reported energy gains range from around 35\% to 55\%. As expected according to the categorisation presented in subsection~\ref{sec:categorisation}, higher energy gains are achieved for applications with higher storage requirements compared to others. The maximum gains for JPEG, motion estimator, mesa 3D and PGP are all above 50\% in contrast to blowfish and Viterbi decoders that are slightly above 40\%.
-
-The increase on the number of scenarios that are implemented on the memory subsystem improves the energy efficient, as variations in storage requirements can be better exploited with more configurations. However, the scaling on energy consumption for an increasing number of scenarios differentiates based on the kind of dynamism present on each application. The application with the higher variation in distribution of memory requirements is the Viterbi encoder/decoder and gains around 10\% for every new memory bank added, even for a platform growing from four to five banks. In contrast, the application with the lowest number of different cases is blowfish and further exploit a platform with more than three banks. Another case in which smaller energy gains are achieved, after a number of platform supported scenarios have been reached, is the PGP. In this benchmark the introduction of more scenarios has an energy impact less than 5\% after the number of three scenarios have been reached.
+Even higher gains are found for the Viterbi encoder (Fig.~\ref{fig:gainsViterbi}) compared to a worst-case assumption of the constraint length being equal to 14. That value of length is used to achieve acceptable BER over very noisy channels. Using the extended system scenario methodology, L1' is split into four smaller banks that can be turned off when the noise of the channel is reduced. Again, the theoretical lower bound assumes a memory organisation with bank sizes optimized for each SNR level. Its hardware implementation would need 24 memory banks instead of 4 in our case, which leads to an unacceptable overhead. The proposed reconfigurable memory organisation can lead to more than 70\% reduction in memory energy consumption in situations with low noise, compared to a static architecture that is tuned to handle SNR levels down to 2.5 dB.
 
 \section{Conclusion}
 \label{sec:conclusion}
 
-The scope of this work is to apply the memory-aware system scenario methodology to a wide range of multimedia application and test its effectiveness based on accurate energy models. A wide range of applications is studied that allow us to draw conclusions about different kinds of dynamic behaviour and their effect on application of the methodology. Results justify the effectiveness of the methodology in reduction of memory energy consumption, which is of great importance in embedded devices. Since memory size requirements are still met in all situations, performance is not reduced. The memory-aware system scenario methodology is suited for applications that experience dynamic behaviour with respect to memory organisation utilization during their execution.
+The scope of this work is to extend the existing system scenario techniques to better take memory into account. The memory-aware system scenario methodology has been described and tested on two real applications from bioengineering and wireless communications domains. Results justify the effectiveness of the methodology in reduction of memory energy consumption, which is of great importance in embedded devices. Since memory size requirements are still met in all situations, performance is not reduced. The memory-aware system scenario methodology is suited for applications that experience dynamic behaviour with respect to memory organisation utilization during their execution.
 
 
 \bibliographystyle{IEEEtran}
-%\bibliographystyle{plain}
-\bibliography{reference}
+\bibliography{IEEEabrv,reference.bib}
 
 \end{document}
-
-
-
-%CUT
-
-1. Should information about using only MM/SCMEM be included? Report 18
-2. 9th and 10th app
-
-from Synopsys\cite{Altera}
-
-The expected behaviour of the benchmark applications can be identified based on some general characteristics
