@@ -14,28 +14,27 @@
 \title{Exploration of energy efficient memory organisations for dynamic multimedia applications using scenarios}
 \author{\IEEEauthorblockN{Iason Filippopoulos\IEEEauthorrefmark{1},
 Francky Catthoor\IEEEauthorrefmark{2},
-Per Gunnar Kjeldsberg\IEEEauthorrefmark{1} and
-Others...\IEEEauthorrefmark{3}}
+Per Gunnar Kjeldsberg\IEEEauthorrefmark{1}}
 \IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electronics and Telecommunications\\
 Norwegian University of Science and Technology,
 Trondheim, Norway\\ Email: iason.filippopoulos@iet.ntnu.no}
-\IEEEauthorblockA{\IEEEauthorrefmark{2}IMEC, Kapeldreef 75, 3000 Leuven, Belgium\\}
-\IEEEauthorblockA{\IEEEauthorrefmark{3}Holst Centre / IMEC Netherlands, High Tech Campus 31, Eindhoven, The Netherlands\\}}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}IMEC, Kapeldreef 75, 3000 Leuven, Belgium\\}}
 
 \maketitle
 
 
 \begin{abstract}
-Memory-aware system scenario approach \cite{Fil12} proposes the use of different scenarios, e.g., different memory platform configurations, in order to exploit variations in  memory needs during the lifetime of an application. In this work an extended and highly accurate database including existing state-of-the-art memory models, available both in the industry and academia, is employed during system design exploration phase. The effectiveness of the proposed methodology is demonstrated and tested using a large set of well-known, open multimedia benchmarks published in Polybench, Mibench and Mediabench suites. Reduction in energy consumption on memory subsystem of up to 55\% is shown.
+Memory-aware system scenario approach proposes the use of different system scenarios, in order to exploit variations in memory needs during the lifetime of an application. Among the most important parameters resulting in different system scenarios are all possible memory platform configurations and data-to-memory mapping options. In this work an extended and sufficiently accurate for the purpose database that includes existing state-of-the-art memory models, available in the industry and academia, is employed during system design exploration phase. Both normal cell and standard cell based memory models are explored in this study. The effectiveness of the proposed methodology is demonstrated and tested using a large set of well-known, open multimedia benchmarks published in Polybench, Mibench and Mediabench suites. Reduction in energy consumption on memory subsystem of up to 55\% is shown.
 \end{abstract}
 \IEEEpeerreviewmaketitle
 
 \section{Introduction}
 \label{sec:introduction}
+\footnotetext{Version 03.04.2013: Comments from Francky, Per Gunnar. New material added. Figures redesigned.}
 
 Modern embedded systems are becoming more and more powerful as the semiconductor processing technique keeps increasing the number of transistors on a single chip. Consequentially, demanding applications, such as signal processing and multimedia applications, can be executed on these devices \cite{narasinga}. On the other hand, the desired performance has to be delivered with the minimum power consumption due to the limited amount of power offered in mobile devices \cite{tcm}. System scenario methodologies propose the use of different platform configurations in order to exploit variations in computational and memory needs often seen during the lifetime of such applications \cite{tcm}. 
 
-With regard to the memory-aware system scenario methodology, a platform can be reconfigured through power gating techniques used for switching certain memory units on lower power modes when not accessed \cite{Fil12}. In this work such a reconfigurable memory platform is constructed using detailed memory models and some dynamic multimedia applications are employed in order to study the effectiveness of the methodology.
+With regard to the memory-aware system scenario methodology, a platform can be reconfigured through a number of potential knobs and each knob consequentially results to different performance and power consumption on memory subsystem. Foremost different energy states are supported on modern memories through power gating techniques and certain memory units could be switched on lower power modes when not accessed \cite{Fil12}. The second platform knob is the mapping of data to the available memory banks. The data mapping decisions affect both the energy per access for the mapped data, the data conflicts as a result of suboptimal mapping and the number of the active banks. In this work a reconfigurable memory platform is constructed using detailed memory models and some dynamic multimedia applications are employed in order to study the effectiveness of the methodology.
 
 This paper is organized as follows. Section~\ref{sec:motivation} discusses the motivation for the study of optimizations on memory organisation. Section~\ref{sec:related} surveys related work on system level memory exploration and on system scenario methodologies. The main contribution of the current study in comparison with that work is also presented in section~\ref{sec:related}. Section~\ref{sec:methodology} presents the chosen methodology with main focus on the memory organisation study. In Section~\ref{sec:platform} the target platform is described accompanied a detailed description of the employed memory models, while the multimedia benchmarks and their characteristics are analysed in Section~\ref{sec:applications}. Results of applying the described methodology to the targeted applications are shown in Section~\ref{sec:results}, while conclusions are drawn in Section~\ref{sec:conclusion}. The main contribution of the current work in comparison with \cite{Fil12} is the usage of more accurate and detailed memory models on the system design exploration, the extended number of benchmark applications on which the methodology is applied and the categorisation of applications, based on their dynamic characteristics.
 

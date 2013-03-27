@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  27 MAR 2013 13:51
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  27 MAR 2013 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,50 +448,57 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 25.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
  (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
 
-]
-Underfull \vbox (badness 4859) has occurred while \output is active []
-
+] [2]
 File: Images/profiling.eps Graphic file (type eps)
 
-<Images/profiling.eps> [2]
+<Images/profiling.eps>
 File: Images/1Dclustering.eps Graphic file (type eps)
  <Images/1Dclustering.eps>
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
 File: Images/2DClustering.eps Graphic file (type eps)
- <Images/2DClustering.eps>
-[3]
+
+<Images/2DClustering.eps>
 File: Images/switching.eps Graphic file (type eps)
- <Images/switching.eps>
+ <Images/switching.eps> [3]
 File: Images/platform.eps Graphic file (type eps)
  <Images/platform.eps>
-Underfull \hbox (badness 1769) in paragraph at lines 148--149
+Underfull \hbox (badness 1769) in paragraph at lines 147--148
 []\OT1/ptm/m/n/10 The dy-namic mem-ory or-gan-i-sa-tion is con-structed us-
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 166--191
+Underfull \hbox (badness 10000) in paragraph at lines 165--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--257
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--256
 
  []
 
-[5] [6]
+[5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
 File: Images/6apps.eps Graphic file (type eps)
- <Images/6apps.eps>
+
+<Images/6apps.eps>
 File: Images/6appsGains.eps Graphic file (type eps)
  <Images/6appsGains.eps> (./extended.bbl [7])
 
@@ -507,14 +514,18 @@ Before submitting the final camera ready copy, remember to:
 
 [8
 
-] (./extended.aux) ) 
+] (./extended.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2611 strings out of 493634
- 35780 string characters out of 3143401
- 105825 words of memory out of 3000000
- 5885 multiletter control sequences out of 15000+200000
- 35688 words of font info for 95 fonts, out of 3000000 for 9000
+ 2612 strings out of 493634
+ 35793 string characters out of 3143401
+ 104825 words of memory out of 3000000
+ 5886 multiletter control sequences out of 15000+200000
+ 36195 words of font info for 96 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  32i,14n,24p,1268b,349s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (8 pages, 53832 bytes).
+Output written on extended.dvi (8 pages, 54692 bytes).
