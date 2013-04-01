@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  27 MAR 2013 17:10
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  1 APR 2013 20:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -461,46 +461,37 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 
 
 ] [2]
-File: Images/profiling.eps Graphic file (type eps)
+File: Images/profiling2.eps Graphic file (type eps)
 
-<Images/profiling.eps>
+<Images/profiling2.eps>
 File: Images/1Dclustering.eps Graphic file (type eps)
- <Images/1Dclustering.eps>
-Underfull \vbox (badness 1303) has occurred while \output is active []
-
+ <Images/1Dclustering.eps> [3]
 File: Images/2DClustering.eps Graphic file (type eps)
 
-<Images/2DClustering.eps>
+<Images/2DClustering.eps> [4]
 File: Images/switching.eps Graphic file (type eps)
- <Images/switching.eps> [3]
+ <Images/switching.eps>
 File: Images/platform.eps Graphic file (type eps)
  <Images/platform.eps>
-Underfull \hbox (badness 1769) in paragraph at lines 147--148
+Underfull \hbox (badness 1769) in paragraph at lines 180--181
 []\OT1/ptm/m/n/10 The dy-namic mem-ory or-gan-i-sa-tion is con-structed us-
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 165--190
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--256
-
- []
-
 [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 198--223
 
- [6]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--289
+
+ []
+
+[6]
 File: Images/6apps.eps Graphic file (type eps)
-
-<Images/6apps.eps>
+ <Images/6apps.eps>
 File: Images/6appsGains.eps Graphic file (type eps)
- <Images/6appsGains.eps> (./extended.bbl [7])
+ <Images/6appsGains.eps> [7] (./extended.bbl [8])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -512,20 +503,16 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[8
+[9
 
-] (./extended.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./extended.aux) ) 
 Here is how much of TeX's memory you used:
- 2612 strings out of 493634
- 35793 string characters out of 3143401
- 104825 words of memory out of 3000000
- 5886 multiletter control sequences out of 15000+200000
+ 2644 strings out of 493634
+ 36064 string characters out of 3143401
+ 105825 words of memory out of 3000000
+ 5918 multiletter control sequences out of 15000+200000
  36195 words of font info for 96 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 32i,14n,24p,1268b,349s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,14n,24p,1052b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (8 pages, 54692 bytes).
+Output written on extended.dvi (9 pages, 61204 bytes).
