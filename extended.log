@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  1 APR 2013 20:44
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  4 APR 2013 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -468,30 +468,32 @@ File: Images/1Dclustering.eps Graphic file (type eps)
  <Images/1Dclustering.eps> [3]
 File: Images/2DClustering.eps Graphic file (type eps)
 
-<Images/2DClustering.eps> [4]
+<Images/2DClustering.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
 File: Images/switching.eps Graphic file (type eps)
- <Images/switching.eps>
+
+<Images/switching.eps>
 File: Images/platform.eps Graphic file (type eps)
  <Images/platform.eps>
-Underfull \hbox (badness 1769) in paragraph at lines 180--181
-[]\OT1/ptm/m/n/10 The dy-namic mem-ory or-gan-i-sa-tion is con-structed us-
+Underfull \hbox (badness 10000) in paragraph at lines 185--210
+
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 198--223
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 265--289
 
  []
 
-[6]
+[6] [7]
 File: Images/6apps.eps Graphic file (type eps)
  <Images/6apps.eps>
 File: Images/6appsGains.eps Graphic file (type eps)
- <Images/6appsGains.eps> [7] (./extended.bbl [8])
+ <Images/6appsGains.eps>
+File: Images/usecase.eps Graphic file (type eps)
+ <Images/usecase.eps>
+(./extended.bbl [8])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -503,16 +505,14 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[9
-
-] (./extended.aux) ) 
+[9] (./extended.aux) ) 
 Here is how much of TeX's memory you used:
- 2644 strings out of 493634
- 36064 string characters out of 3143401
- 105825 words of memory out of 3000000
- 5918 multiletter control sequences out of 15000+200000
+ 2650 strings out of 493634
+ 36128 string characters out of 3143401
+ 104825 words of memory out of 3000000
+ 5923 multiletter control sequences out of 15000+200000
  36195 words of font info for 96 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  32i,14n,24p,1052b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (9 pages, 61204 bytes).
+Output written on extended.dvi (9 pages, 65880 bytes).
