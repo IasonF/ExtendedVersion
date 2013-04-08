@@ -1,24 +1,45 @@
-\documentclass[a4paper,conference]{IEEEtran}
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission,
+% you need to 'insert'  your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+\documentclass{acm_proc_article-sp}
 
-\usepackage[utf8]{inputenc}
+
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{array}
-\usepackage[cmex10]{amsmath}
+\usepackage{amsmath}
 \usepackage{multirow}
 \usepackage{algorithmic}
 
 \begin{document}
 
 \title{Exploration of energy efficient memory organisations for dynamic multimedia applications using system scenarios}
-\author{\IEEEauthorblockN{Iason Filippopoulos\IEEEauthorrefmark{1},
-Francky Catthoor\IEEEauthorrefmark{2} and
-Per Gunnar Kjeldsberg\IEEEauthorrefmark{1}}
-\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electronics and Telecommunications\\
-Norwegian University of Science and Technology,
-Trondheim, Norway\\ Email: iason.filippopoulos@iet.ntnu.no}
-\IEEEauthorblockA{\IEEEauthorrefmark{2}IMEC, Kapeldreef 75, 3000 Leuven, Belgium\\}}
+
+\numberofauthors{3} 
+\author{
+\alignauthor
+Iason Filippopoulos\\
+		\affaddr{NTNU}\\
+       %\affaddr{Department of Electronics and Telecommunications}\\
+       %\affaddr{Norwegian University of Science and Technology}\\
+       \affaddr{Trondheim, Norway}\\
+       \email{iason.filippopoulos@iet.ntnu.no} 
+\alignauthor
+Francky Catthoor\\
+       \affaddr{IMEC}\\
+       \affaddr{KU Leuven}\\
+       \affaddr{Leuven, Belgium}\\
+       \email{catthoor@imec.be}  
+\alignauthor     
+Per Gunnar Kjeldsberg\\
+		\affaddr{NTNU}\\
+       %\affaddr{Department of Electronics and Telecommunications}\\
+       %\affaddr{Norwegian University of Science and Technology}\\
+       \affaddr{Trondheim, Norway}\\
+       \email{pgk@iet.ntnu.no}
+}       
 
 \maketitle
 
@@ -26,7 +47,18 @@ Trondheim, Norway\\ Email: iason.filippopoulos@iet.ntnu.no}
 \begin{abstract}
 We propose a memory-aware system scenario approach that exploits variations in memory needs during the lifetime of an application to optimize energy usage. Different system scenarios capture the application's different resource requirements which change dynamically at runtime. In addition to computational resources, the many possible memory platform configurations and data-to-memory assignments are among the most important system scenario parameters. Here we present an extended memory model that includes existing state-of-the-art memories, available in the industry and academia, and show how it is employed during the system design exploration phase. Both commercial SRAM and standard cell based memory models are explored in this study. The effectiveness of the proposed methodology is demonstrated and tested using a large set of multimedia benchmarks published in the Polybench, Mibench and Mediabench suites. Reduction in energy consumption in the memory subsystem ranges from 35\% to 55 \% for the chosen set of benchmarks.
 \end{abstract}
-\IEEEpeerreviewmaketitle
+
+\category{D.2.10}{Software Engineering}[design, methodologies]
+\category{B.7.1}{Integrated Circuits}{Types and Design Styles}[memory technologies, design]
+
+% A category with the (minimum) three required fields
+\category{H.4}{Information Systems Applications}{Miscellaneous}
+%A category including the fourth, optional field follows...
+\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+
+\terms{Theory}
+
+\keywords{ACM proceedings, \LaTeX, text tagging} % NOT required for Proceedings
 
 \section{Introduction}
 \label{sec:introduction}
@@ -397,6 +429,7 @@ The scope of this work is to apply the memory-aware system scenario methodology 
 \bibliographystyle{IEEEtran}
 %\bibliographystyle{plain}
 \bibliography{reference}
+%\balancecolumns
 
 \end{document}
 
