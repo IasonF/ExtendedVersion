@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  8 APR 2013 15:46
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  9 APR 2013 12:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -211,21 +211,36 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \c@ALC@depth=\count111
 \ALC@tlm=\skip46
 \algorithmicindent=\skip47
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count112
+\float@exts=\toks37
+\float@box=\box30
+\@float@everytoks=\toks38
+\@floatcapt=\box31
+)
+\@float@every@algorithm=\toks39
+\c@algorithm=\count113
 ) (./extended.aux)
 \openout1 = `extended.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Try loading font information for U+msa on input line 45.
  (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
@@ -249,121 +264,153 @@ Overfull \hbox (1.79857pt too wide) in paragraph at lines 49--51
 \T1/aer/m/n/9 among the most im-por-tant sys-tem sce-nario pa-ram-e-ters. Here
  []
 
+
+Overfull \hbox (4.1823pt too wide) in paragraph at lines 52--56
+\T1/aer/m/n/9 niques--- \T1/aer/m/it/9 de-sign, method-olo-gies\T1/aer/m/n/9 ; 
+B.7.1 [\T1/aer/bx/n/9 Integrated Cir-cuits\T1/aer/m/n/9 ]:
+ []
+
+
+Overfull \hbox (4.70436pt too wide) in paragraph at lines 52--56
+\T1/aer/m/n/9 Types and De-sign Styles--- \T1/aer/m/it/9 mem-ory tech-nolo-gies
+, de-sign\T1/aer/m/n/9 ; B.8.2
+ []
+
+
+Overfull \hbox (1.59209pt too wide) in paragraph at lines 52--56
+\T1/aer/m/n/9 and De-sign Aids; C.3 [\T1/aer/bx/n/9 Special-Purpose and Applica
+tion-
+ []
+
 [1
 
 
 ]
-Overfull \hbox (5.1321pt too wide) in paragraph at lines 92--92
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (5.1321pt too wide) in paragraph at lines 103--103
 []\secfnt RELATED WORK AND CON-TRI-BU-TION
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-Overfull \hbox (6.11642pt too wide) in paragraph at lines 116--117
+[2]
+Overfull \hbox (6.11642pt too wide) in paragraph at lines 127--128
 []\T1/aer/m/n/9 In the fol-low-ing sub-sec-tions, the dif-fer-ent steps of the 
 memory-
  []
 
 
-Overfull \hbox (7.94183pt too wide) in paragraph at lines 118--118
+Overfull \hbox (7.94183pt too wide) in paragraph at lines 129--129
 []\secfnt General De-scrip-tion of Data Vari-able Based
  []
 
 File: Images/profiling2.eps Graphic file (type eps)
 <Images/profiling2.eps>
-Underfull \vbox (badness 2460) has occurred while \output is active []
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 139--140
+ [][] 
+ []
 
- [3]
-Overfull \hbox (5.15753pt too wide) in paragraph at lines 140--140
+[3]
+Overfull \hbox (5.15753pt too wide) in paragraph at lines 154--154
 []\secfnt Design-time Sys-tem Sce-nario Iden-ti-fi-ca-tion
  []
 
 File: Images/1Dclustering.eps Graphic file (type eps)
 <Images/1Dclustering.eps>
-File: Images/2DClustering.eps Graphic file (type eps)
- <Images/2DClustering.eps>
-Underfull \vbox (badness 2452) has occurred while \output is active []
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 159--160
+ [][] 
+ []
+
+File: Images/2Dclustering.eps Graphic file (type eps)
+<Images/2Dclustering.eps>
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 177--178
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
 File: Images/switching.eps Graphic file (type eps)
 
 <Images/switching.eps>
-Overfull \hbox (29.89941pt too wide) in paragraph at lines 181--181
-[]\secfnt TARGET PLAT-FORM AND EN-ERGY MODEL 
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 191--192
+ [][] 
  []
 
 File: Images/platform.eps Graphic file (type eps)
 <Images/platform.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 206--231
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 212--213
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--249
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 286--310
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 304--328
 
  []
 
-[6]
-Overfull \hbox (9.58589pt too wide) in paragraph at lines 315--315
+
+Overfull \hbox (9.58589pt too wide) in paragraph at lines 333--333
 []\secfnt Presentation of Mul-ti-me-dia Bench-mark Ap-
  []
 
 
-Overfull \hbox (2.79369pt too wide) in paragraph at lines 326--326
+Overfull \hbox (2.79369pt too wide) in paragraph at lines 344--344
 []\secfnt Classification of Ap-pli-ca-tions Based on Ba-
  []
 
 [7]
 File: Images/6apps.eps Graphic file (type eps)
  <Images/6apps.eps>
-Overfull \hbox (1.91785pt too wide) in paragraph at lines 345--346
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 364--365
  [][] 
  []
 
 File: Images/6appsGains.eps Graphic file (type eps)
 <Images/6appsGains.eps>
-Overfull \hbox (1.91785pt too wide) in paragraph at lines 352--353
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 372--373
  [][] 
  []
 
 
-Overfull \hbox (275.32184pt too wide) in paragraph at lines 367--391
+Overfull \hbox (34.12646pt too wide) in paragraph at lines 382--405
 []  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--391
+Underfull \hbox (badness 10000) in paragraph at lines 382--405
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--391
+Underfull \hbox (badness 10000) in paragraph at lines 382--405
 
  []
 
 [8]
 File: Images/usecase.eps Graphic file (type eps)
  <Images/usecase.eps>
-Overfull \hbox (1.91785pt too wide) in paragraph at lines 407--408
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 418--419
  [][] 
  []
 
-(./extended.bbl
+(./extended.bbl [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9])
-[10
-
-] (./extended.aux) ) 
+) [10]
+(./extended.aux) ) 
 Here is how much of TeX's memory you used:
- 2139 strings out of 493634
- 24425 string characters out of 3143401
- 91226 words of memory out of 3000000
- 5400 multiletter control sequences out of 15000+200000
+ 2233 strings out of 493634
+ 25731 string characters out of 3143401
+ 87226 words of memory out of 3000000
+ 5487 multiletter control sequences out of 15000+200000
  45973 words of font info for 61 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 39i,10n,26p,1063b,532s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,26p,1192b,561s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (10 pages, 72916 bytes).
+Output written on extended.dvi (10 pages, 72452 bytes).

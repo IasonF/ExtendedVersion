@@ -1,56 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2011)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: extended.aux
-The style file: IEEEtran.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+The style file: abbrv.bst
 Database file #1: reference.bib
--- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
--- http://www.michaelshell.org/tex/ieeetran/bibtex/
--- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-
-Done.
 You've used 27 entries,
-            4039 wiz_defined-function locations,
-            982 strings with 12658 characters,
-and the built_in function-call counts, 20125 in all, are:
-= -- 1547
-> -- 522
-< -- 152
-+ -- 272
-- -- 96
-* -- 965
-:= -- 2952
-add.period$ -- 57
+            2118 wiz_defined-function locations,
+            672 strings with 9151 characters,
+and the built_in function-call counts, 10551 in all, are:
+= -- 1005
+> -- 559
+< -- 11
++ -- 223
+- -- 192
+* -- 734
+:= -- 1695
+add.period$ -- 83
 call.type$ -- 27
-change.case$ -- 26
-chr.to.int$ -- 357
+change.case$ -- 169
+chr.to.int$ -- 0
 cite$ -- 27
-duplicate$ -- 1479
-empty$ -- 1739
-format.name$ -- 121
-if$ -- 4685
+duplicate$ -- 419
+empty$ -- 804
+format.name$ -- 192
+if$ -- 2267
 int.to.chr$ -- 0
 int.to.str$ -- 27
-missing$ -- 271
-newline$ -- 104
-num.names$ -- 27
-pop$ -- 662
+missing$ -- 27
+newline$ -- 137
+num.names$ -- 54
+pop$ -- 202
 preamble$ -- 1
-purify$ -- 0
-quote$ -- 2
-skip$ -- 1548
+purify$ -- 144
+quote$ -- 0
+skip$ -- 328
 stack$ -- 0
-substring$ -- 849
-swap$ -- 1160
-text.length$ -- 33
+substring$ -- 564
+swap$ -- 131
+text.length$ -- 11
 text.prefix$ -- 0
-top$ -- 5
-type$ -- 27
+top$ -- 0
+type$ -- 104
 warning$ -- 0
-while$ -- 87
+while$ -- 90
 width$ -- 29
-write$ -- 269
+write$ -- 295
