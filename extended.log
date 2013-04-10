@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  10 APR 2013 11:15
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  10 APR 2013 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -260,11 +260,6 @@ Overfull \hbox (30.80978pt too wide) in paragraph at lines 45--45
  []
 
 
-Overfull \hbox (1.79857pt too wide) in paragraph at lines 49--51
-\T1/aer/m/n/9 among the most im-por-tant sys-tem sce-nario pa-ram-e-ters. Here
- []
-
-
 Overfull \hbox (4.1823pt too wide) in paragraph at lines 52--56
 \T1/aer/m/n/9 niques--- \T1/aer/m/it/9 de-sign, method-olo-gies\T1/aer/m/n/9 ; 
 B.7.1 [\T1/aer/bx/n/9 Integrated Cir-cuits\T1/aer/m/n/9 ]:
@@ -289,41 +284,39 @@ tion-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (5.1321pt too wide) in paragraph at lines 103--103
-[]\secfnt RELATED WORK AND CON-TRI-BU-TION
- []
+Underfull \vbox (badness 2443) has occurred while \output is active []
 
-[2]
-Overfull \hbox (6.11642pt too wide) in paragraph at lines 127--128
+ [2]
+Overfull \hbox (6.11642pt too wide) in paragraph at lines 131--132
 []\T1/aer/m/n/9 In the fol-low-ing sub-sec-tions, the dif-fer-ent steps of the 
 memory-
  []
 
 
-Overfull \hbox (7.94183pt too wide) in paragraph at lines 129--129
+Overfull \hbox (7.94183pt too wide) in paragraph at lines 136--136
 []\secfnt General De-scrip-tion of Data Vari-able Based
  []
 
 File: Images/profiling2.eps Graphic file (type eps)
 <Images/profiling2.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 139--140
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 146--147
  [][] 
  []
 
 [3]
-Overfull \hbox (5.15753pt too wide) in paragraph at lines 154--154
+Overfull \hbox (5.15753pt too wide) in paragraph at lines 161--161
 []\secfnt Design-time Sys-tem Sce-nario Iden-ti-fi-ca-tion
  []
 
 File: Images/1Dclustering.eps Graphic file (type eps)
 <Images/1Dclustering.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 159--160
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 166--167
  [][] 
  []
 
 File: Images/2Dclustering.eps Graphic file (type eps)
 <Images/2Dclustering.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 177--178
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 184--185
  [][] 
  []
 
@@ -334,68 +327,68 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: Images/switching.eps Graphic file (type eps)
 
 <Images/switching.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 191--192
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 198--199
  [][] 
  []
 
 File: Images/platform.eps Graphic file (type eps)
 <Images/platform.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 212--213
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 219--220
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--249
+Underfull \hbox (badness 10000) in paragraph at lines 231--256
 
  []
 
 [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 304--328
+Underfull \hbox (badness 10000) in paragraph at lines 311--335
 
  []
 
 
-Overfull \hbox (9.58589pt too wide) in paragraph at lines 333--333
+Overfull \hbox (9.58589pt too wide) in paragraph at lines 340--340
 []\secfnt Presentation of Mul-ti-me-dia Bench-mark Ap-
  []
 
 
-Overfull \hbox (2.79369pt too wide) in paragraph at lines 344--344
+Overfull \hbox (2.79369pt too wide) in paragraph at lines 351--351
 []\secfnt Classification of Ap-pli-ca-tions Based on Ba-
  []
 
 [7]
 File: Images/6apps.eps Graphic file (type eps)
  <Images/6apps.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 364--365
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 371--372
  [][] 
  []
 
 File: Images/6appsGains.eps Graphic file (type eps)
 <Images/6appsGains.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 372--373
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 379--380
  [][] 
  []
 
 
-Overfull \hbox (34.12646pt too wide) in paragraph at lines 382--405
+Overfull \hbox (34.12646pt too wide) in paragraph at lines 389--412
 []  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--405
+Underfull \hbox (badness 10000) in paragraph at lines 389--412
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--405
+Underfull \hbox (badness 10000) in paragraph at lines 389--412
 
  []
 
 [8]
 File: Images/usecase.eps Graphic file (type eps)
  <Images/usecase.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 418--419
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 425--426
  [][] 
  []
 
@@ -413,4 +406,4 @@ Here is how much of TeX's memory you used:
  831 hyphenation exceptions out of 8191
  39i,10n,26p,1192b,561s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (10 pages, 72452 bytes).
+Output written on extended.dvi (10 pages, 72204 bytes).
