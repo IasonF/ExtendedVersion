@@ -83,25 +83,37 @@ As shown in \cite{Gonzalez1996} memory contributes around 40\% to the overall po
 In addition, modern applications exhibit more and more dynamic behaviour, which is reflected also in fluctuating memory requirements. Techniques have been developed in order to estimate the storage size requirements of applications in a systematic way \cite{Ang13}. The significant contribution that the memory subsystem has to the overall energy consumption of a system and the dynamic nature of many applications offer a strong motivation for the study and optimization of memory organisation in modern embedded devices.
 
 %F: motivation example added
-To illustrate the aforementioned sub-optimal conventional allocation and assignment of data, the simple example in Fig.~\ref{fig:motivation} is used. The kernel code of an image processing application continuously reads images and performs a \textit{foo} function on each pixel of the image. Typically arrays are used for storing the intermediate calculations in image processing applications, \textit{array} in the motivation example. The memory size used for storage of \textit{array}  is defined by the dimensions of the \textit{image} and can be potentially different for a series of input images. In a conventional assignment the highest values of \textit{height} and \textit{width} are identified and a static compiling results in allocation of the worst-case area for \textit{array}. However, only a part of the allocated space is accessed during processing of smaller images. The proposed methodology optimises the memory usage for dynamic cases similar to the simplified motivation example.
+To illustrate the aforementioned sub-optimal conventional allocation and assignment of data, the simple example in Fig.~\ref{fig:motivation} is used. The kernel code of an image processing application continuously reads images, saves image on the memory and performs a \textit{foo} function on each pixel of the image. Typically arrays are used for storing the intermediate calculations in image processing applications, \textit{array} in the motivation example. The memory size used for storage of initial \textit{image} and computed \textit{array} is defined by the dimensions of the \textit{image} and can be potentially different for a series of input images. In a conventional assignment the highest values of \textit{height} and \textit{width} are identified and a static compiling results in allocation of the worst-case area for \textit{array}. However, only a part of the allocated space is accessed during processing of smaller images. 
 
 \begin{algorithm}[H]
 \caption{Motivation example of dynamic memory usage}
  \label{fig:motivation}
  \begin{algorithmic}[1]
-	\WHILE{$image \ne 0$}
+	\WHILE{$image \ne EndOfDatabase$}
 		\STATE $height \gets length(image)$
 		\STATE $width \gets width(image)$
+		\STATE $save(image[height][width])$
 			\FOR{$i = 0 \to height$} 
 				\FOR{$j = 0 \to width$} 
 					\STATE $array[i][j] \gets foo(image[i][j])$
 				\ENDFOR
 			\ENDFOR
+		\STATE $image \gets new.image$	
 	\ENDWHILE
  \end{algorithmic}
 \end{algorithm}
 
+The effect of sub-optimal allocation on the energy consumption can be illustrated using a simplified memory model and a few simple calculations. Assuming that an image \textit{ImgA} is double the size of another image \textit{ImgB}, then the memory space allocated for \textit{image} and \textit{array} is four times higher for \textit{ImgA} compared to \textit{ImgB}. Assuming also a memory subsystem with two independent scratch pad memories with sizes equal to \textit{ImgA} and $4 \times \textit{ImgA}$ and energy per access \textit{E} and $1.5 \times E$, respectively. The number of accesses is \textit{N} and $ 4 \times N$ for the processing of \textit{ImgA} and \textit{ImgB}. The conventional approach always allocates the whole memory to fit the processing needs of both cases and always assigns data to the most energy hungry memory, while the proposed methodology allocates according to the storage requirements of each image. The simplified calculations for energy consumption for the first approach is: \begin{math}N \times 1.5E + 4 \times N \times 1.5E = 7.5 \times NE\end{math}, while the second approach results in: \begin{math}N \times E + ( N \times E + 3N \times 1.5E ) = 6.5 \times NE \end{math}. In addition, a crude assumption on the leakage, as a percentage of the access energy for the whole processing time of the two images, can be made. Assuming a leakage energy of 30\% on always active mode of the first approach the final energy consumption is $ 1.30 \times ( 7.5 \times NE )  = 9.75 \times NE$. In the proposed approach each of the scratch pad memories is set into sleep mode for half of the time and assuming no leakage during that time, the final energy consumption will be $ 1.15 \times ( 6.5 \times NE )  = 7.475 \times NE$, which is around 25\% lower. The proposed methodology optimises the memory usage for dynamic cases similar to the simplified motivation example.
 
+
+% and a leakage energy (as a percentage of access energy for the whole processing time of one image) of 30\% on active mode and 10\% on sleep mode, respectively. 
+%\begin{equation}
+%Energy = \sum\limits_{ImgA}^{ImgB} N \times 1.5x + 0.3 \times x
+%\end{equation}
+%and the result for the second is calculated as:
+%\begin{equation}
+%Energy = \sum\limits_{ImgA}^{ImgB} (3*N)/4 \times 1.5x + N/4 \times x + 0.3 \times x
+%\end{equation}
 
 \section{Related Work}
 %and Contribution Discussion}
@@ -120,20 +132,13 @@ Authors in \cite{Pal06} present a technique to optimise memory accesses for inpu
 
 Reconfigurable hardware for embedded systems, including the memory architecture, is a topic of active research. An extensive overview of current approaches is found in \cite{Garcia}. The approach presented in this paper differentiates by focusing on the data-to-memory assignment aspects in the presence of a platform with dynamically configurable memory blocks. Moreover, many methods for source code transformations, and especially loop transformations, have been proposed in the memory management context. These methods are fully complementary to our focus on data-to-memory assignment and should be performed prior to our step. 
 
-\section{Memory-Aware System Scenario Methodology}
+\section{Data Variable Based Memory-Aware System Scenario Methodology}
 \label{sec:methodology}
 %PKG: Remove most of the citations to Norchip
 
 The memory-aware system scenario methodology is based on the observation that the memory subsystem requirements at run-time vary significantly due to dynamic variations of memory needs in the application code. Most existing design methodologies define the memory requirements as that of the most demanding task and tune the system in order to meet its needs \cite{tcm}. Obviously, this approach leads to unused memory area for tasks with lower memory requirements, since those tasks could meet their needs using fewer resources and consequentially consuming less energy. Another source of unnecessary waste of energy in the memory is caused by data conflicts due to misplaced data. Replacement of old data and fetching of new data is both time and energy consuming and should therefore be avoided. Handling of data conflicts is also part of the  memory-aware system scenario methodology.
 
-Designing with system scenarios is workload adaptive and offers different configurations of the platform and the freedom of switching to the most efficient scenario at run-time. In contrast to use case scenario approaches in which scenarios are generated based on a user's behaviour, the system scenario methodology focuses on behaviour of the system to generate scenarios. A system scenario is a configuration of the system that combines similar run-time situations (RTSs). An RTS consists of a running instance of a task and its corresponding cost (e.g., energy consumption) and one complete run of the application on the target platform represents a sequence of RTSs \cite{Elena2010}. The system is configured to meet the cost requirements of an RTS by choosing the appropriate system scenario, which is the one that satisfies the requirements using minimal power.
-
-In the following subsections, the different steps of the memory-aware system scenario methodology are outlined. A more detailed presentation of system scenario methodology and its extensions to make it applicable in a memory organisation study can be found in \cite{Fil12}.
-
-JEG HAR KOMMET HIT
-
-
-\subsection{General Description of Data Variable Based Memory-Aware System Scenario Methodology}
+Designing with system scenarios is workload adaptive and offers different configurations of the platform and the freedom of switching to the most efficient scenario at run-time. In contrast to use case scenario approaches in which scenarios are generated based on a user's behaviour, the system scenario methodology focuses on behaviour of the system to generate scenarios. A system scenario is a configuration of the system that combines similar run-time situations (RTSs). An RTS consists of a running instance of a task and its corresponding cost (e.g., energy consumption) and one complete run of the application on the target platform represents a sequence of RTSs \cite{Elena2010}. The system is configured to meet the cost requirements of an RTS by choosing the appropriate system scenario, which is the one that satisfies the requirements using minimal power. In the following subsections, the different steps of the memory-aware system scenario methodology are outlined. 
 
 The system scenario methodology follows a two stage exploration, namely design-time and run-time stages, as described in \cite{Gheorghita2007}, which is also employed in the memory-aware extension of the methodology. The two stage exploration is chosen because it reduces run-time overhead while preserving an important degree of freedom for run-time configuration \cite{tcm}. In more detail, the application is analysed at design-time and different execution paths causing variations in memory demands are identified. This procedure, which is time consuming and as a result can be performed only during the design phase, will result in a grey-box model representation of the application. The grey-box model hides all static and deterministic parts of the application, by providing only related memory costs for those, and keeps parts of the application code that are non-deterministic in terms of memory usage available to the system designer \cite{graybox}. 
 
@@ -143,18 +148,18 @@ The system scenario methodology follows a two stage exploration, namely design-t
 \begin{figure}[!t]
 \centering
 %\includegraphics[width=0.49\textwidth]{Images/profiling2.eps}
-\epsfig{file=Images/profiling2.eps, width=0.49\textwidth}
+\epsfig{file=Images/profiling.eps, width=0.49\textwidth}
 \caption{Profiling results based on application code and input data.}
 \label{fig:profiling}
 \end{figure}
 
 
 
-Application profiling is performed at design-time and consists of an analysis of the target application during its lifetime and for a wide range of inputs. The analysis focuses on the allocated memory size during execution and the variation in access pattern of the application. Techniques described in \cite{Ang13b} are used among others, in order to extract the access scheme. Several applications dynamically allocate and deallocate memory space during their execution, based both on the source code and the given input. 
+Application profiling is performed at design-time and consists of an analysis of the target application during its lifetime and for a wide range of inputs. The analysis focuses on the allocated memory size during execution and the variation in access pattern of the application. Techniques described in \cite{Ang13b} are used among others, in order to extract the access scheme. Those storage size estimation techniques analyse the iteration space of array elements, identify any holes in it and provide the exact number of memory accesses. Several applications dynamically allocate and deallocate memory space during their execution, based both on the source code and the given input. 
 
 The profiling stage is depicted in Fig.~\ref{fig:profiling} and consists of running the application code with suitable input data often found in a database, in order to produce profiling results. This reveals parts of the application code with high memory activity and with varying memory access intensity, which possibly depends on input data variables. Because of this behaviour, a static study of the application code alone is insufficient since the target applications for this methodology have non-deterministic behaviour that is driven by input. Choosing an extensive and accurate database is vital and will heavily influence and steer the designer's decisions in later steps. 
 
-Given code and database as inputs, profiling will show memory usage during execution time by running the application using the whole database as an input. Results provided to the designer include complete information about allocated memory size values together with the number of occurrences and duration for each of these memory size values. Moreover, correlation between input data variable values and the resulting memory behaviour can possibly be observed. This information should be corporated to the clustering step that follows. 
+Given code and database as inputs, profiling will show memory usage during execution time by running the application using the whole database as an input. Results provided to the designer include complete information about allocated memory size values together with the number of occurrences and duration for each of these memory size values. Moreover, correlation between input data variable values and the resulting memory behaviour can possibly be observed. This information is useful to the clustering step that follows. 
 
 In Fig.~\ref{fig:profiling} the profiled applications are two image related multimedia benchmarks and the input database should consist of a variety of images. The storage requirements in each case are driven by the current input image size, which is classified as an data variable due to the wide range of its possible values. 
 
@@ -176,7 +181,7 @@ The same principal applies also when the number of system scenarios is increased
 
 The storage size and the frequency of each RTS are not the only two parameters that should be taken into consideration during the system scenario identification. The storage size of each RTS results in a different energy cost depending on the way it is mapped into memory. The impact of the different assignment possibilities is included into clustering by introduction of energy as a cost metric. The energy cost for each RTS is calculated using a reference platform with one to five memory banks. Increasing the number of memory banks results in lower energy per access since the most accessed elements can be assigned to smaller and more energy efficient banks. Unused banks can be switched off.
 
-A Pareto space is used for clustering that also includes the energy cost metric. For each RTS all different assignment options are studied. A Pareto curve that includes only the optimal assignment of data to the reference platform is constructed for each RTS. Suboptimal assignments that result in conflicts are not included in the Pareto curve. In Fig.~\ref{fig:pareto} four Pareto curves each corresponding to a different RTS are shown together with energy cost levels corresponding to different data-to-memory assignment decisions. Pareto curves are clustered into three different system scenarios based again both on their distance and frequency of occurrence. A smaller number of RTSs is depicted in Fig.~\ref{fig:pareto} compared to Fig.~\ref{fig:clustering}, although the numbering follows the clustering for the maximum number of scenarios. 
+A Pareto space is used for clustering that also includes the energy cost metric. For each RTS all different assignment options on all alternative platform configurations are studied. A Pareto curve is constructed for each RTS that contains the optimal assignment for each platform configuration. Suboptimal assignments and assignments that result in conflicts are not included in the Pareto curve. In Fig.~\ref{fig:pareto} four Pareto curves each corresponding to a different RTS are shown together with energy cost levels corresponding to different data-to-memory assignment decisions. Pareto curves are clustered into three different system scenarios based again both on their distance and frequency of occurrence. Clustering of RTSs using Pareto curves is more accurate compared to the clustering depicted in Fig.~\ref{fig:clustering}, as it includes   data-to-memory assignment options into exploration. 
 
 \begin{figure}[!t]
 \centering
