@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  11 APR 2013 11:50
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  11 APR 2013 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -348,34 +348,38 @@ Overfull \hbox (2.79369pt too wide) in paragraph at lines 356--356
 [7]
 File: Images/6apps.eps Graphic file (type eps)
  <Images/6apps.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 376--377
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 374--375
  [][] 
  []
 
 File: Images/6appsGains.eps Graphic file (type eps)
 <Images/6appsGains.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 384--385
+Overfull \hbox (6.96277pt too wide) in paragraph at lines 382--383
  [][] 
  []
 
 
-Overfull \hbox (34.12646pt too wide) in paragraph at lines 394--417
+Overfull \hbox (34.12646pt too wide) in paragraph at lines 392--415
 []  []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--417
+Underfull \hbox (badness 10000) in paragraph at lines 392--415
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--417
+Underfull \hbox (badness 10000) in paragraph at lines 392--415
 
  []
 
-[8]
+
+Underfull \vbox (badness 1596) has occurred while \output is active []
+
+ [8]
 File: Images/usecase.eps Graphic file (type eps)
- <Images/usecase.eps>
+
+<Images/usecase.eps>
 Overfull \hbox (6.96277pt too wide) in paragraph at lines 430--431
  [][] 
  []
@@ -394,4 +398,4 @@ Here is how much of TeX's memory you used:
  831 hyphenation exceptions out of 8191
  39i,10n,26p,1932b,561s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (10 pages, 74688 bytes).
+Output written on extended.dvi (10 pages, 74576 bytes).
