@@ -26,12 +26,12 @@ E.-Y. Chung, G.~De~Micheli, and L.~Benini.
   electronics and design}, ISLPED '02, pages 42--47, 2002.
 
 \bibitem{Fil12}
-I.~Filippopoulos, F.~Catthoor, P.~G. Kjeldsberg, E.~Hammari, and J.~Huisken.
+I.~Filippopoulos et~al.
 \newblock Memory-aware system scenario approach energy impact.
 \newblock In {\em NORCHIP, 2012}, pages 1 --6, nov. 2012.
 
 \bibitem{Garcia}
-P.~Garcia, K.~Compton, M.~Schulte, E.~Blem, and W.~Fu.
+P.~Garcia et~al.
 \newblock An overview of reconfigurable hardware in embedded systems.
 \newblock {\em EURASIP J. Embedded Syst.}, 2006(1):13--13, Jan. 2006.
 
@@ -48,42 +48,40 @@ R.~Gonzalez and M.~Horowitz.
   1996.
 
 \bibitem{mibench}
-M.~Guthaus, J.~Ringenberg, D.~Ernst, T.~Austin, T.~Mudge, and R.~Brown.
+M.~Guthaus et~al.
 \newblock Mibench: A free, commercially representative embedded benchmark
   suite.
 \newblock In {\em Workload Characterization, 2001. WWC-4. 2001 IEEE
   International Workshop on}, pages 3--14. IEEE, 2001.
 
 \bibitem{Elena2010}
-E.~Hammari, F.~Catthoor, J.~Huisken, and P.~G. Kjeldsberg.
+E.~Hammari et~al.
 \newblock Application of medium-grain multiprocessor mapping methodology to
   epileptic seizure predictor.
 \newblock In {\em NORCHIP, 2010}, pages 1 --6, nov. 2010.
 
 \bibitem{graybox}
-S.~Himpe, G.~Deconinck, F.~Catthoor, and J.~van Meerbergen.
-\newblock Mtg* and grey-box: modelling dynamic multimedia applications with
+S.~Himpe, F.~Catthoor, G.~De~Coninck, and J.~Van~Meerbergen.
+\newblock Mtg and grey-box: modeling dynamic multimedia applications with
   concurrency and non-determinism.
-\newblock In {\em System Specification and Design Languages: Best of FDL’02},
-  2002.
+\newblock {\em System Specification and Design Languages: Best of FDL02}, 2002.
 
 \bibitem{Hul11}
-J.~Hulzink, M.~Konijnenburg, M.~Ashouei, A.~Breeschoten, T.~Berset, J.~Huisken,
-  J.~Stuyt, H.~de~Groot, F.~Barat, J.~David, et~al.
+J.~Hulzink et~al.
 \newblock An ultra low energy biomedical signal processing system operating at
   near-threshold.
 \newblock {\em Biomedical Circuits and Systems, IEEE Transactions on},
   5(6):546--554, 2011.
 
 \bibitem{Ang13b}
-A.~Kritikakou, F.~Catthoor, V.~Kelefouras, and C.~Goutis.
+A.~Kritikakou et~al.
 \newblock Near-optimal and scalable intra-signal in-place for non-overlapping
   and irregular access scheme.
 \newblock {\em ACM Trans. Design Automation of Electronic Systems (TODAES)},
   conditionally accepted, 2013.
 
 \bibitem{Ang13}
-A.~Kritikakou, F.~Catthoor, V.~Kelefouras, and C.~Goutis.
+A.~Kritikakou et~al.
 \newblock A scalable and near-optimal representation for storage size
   management.
 \newblock {\em ACM Trans. Architecture and Code Optimization}, conditionally
@@ -108,8 +106,7 @@ A.~Macii, L.~Benini, and M.~Poncino.
 \newblock Kluwer Academic Publishers, 2002.
 
 \bibitem{Mar03}
-P.~Marchal, D.~Bruni, J.~Gomez, L.~Benini, L.~Pinuel, F.~Catthoor, and
-  H.~Corporaal.
+P.~Marchal et~al.
 \newblock Sdram-energy-aware memory allocation for dynamic multi-media
   applications on multi-processor platforms.
 \newblock In {\em Design, Automation and Test in Europe Conference and
@@ -136,23 +133,22 @@ N.~R. Miniskar.
 \newblock PhD thesis, Katholieke Universiteit Leuven, 2012.
 
 \bibitem{Pal06}
-M.~Palkovic, F.~Catthoor, and H.~Corporaal.
+M.~Palkovic et~al.
 \newblock Dealing with variable trip count loops in system level exploration.
-\newblock In {\em ODES: 4th Workshop on Optimizations for DSP and Embedded
-  Systems}, 2006.
-
-\bibitem{Pal07}
-M.~Palkovic, H.~Corporaal, and F.~Catthoor.
-\newblock Heuristics for scenario creation to enable general loop
-  transformations.
-\newblock In {\em System-on-Chip, 2007 International Symposium on}, pages 1
-  --4, nov. 2007.
+\newblock In {\em Proc. of the 4th Workshop on Optimizations for DSP and
+  Embedded Systems}, pages 21--30. IEEE and ACM SIGMICRO, 2006.
 
 \bibitem{Pal06b}
 M.~Palkovic et~al.
 \newblock Systematic preprocessing of data dependent constructs for embedded
   systems.
 \newblock {\em Journal of Low Power Electronics, Volume 2, Number 1}, 2006.
+
+\bibitem{Pal07}
+M.~Palkovic et~al.
+\newblock Heuristics for scenario creation to enable general loop
+  transformations.
+\newblock In {\em System-on-Chip, 2007 Int. Symp. on}, pages 1 --4, nov. 2007.
 
 \bibitem{Pgk01}
 P.~R. Panda et~al.
