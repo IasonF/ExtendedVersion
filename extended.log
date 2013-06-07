@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  7 JUN 2013 11:29
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  7 JUN 2013 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -16,17 +16,107 @@ iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
 ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
 ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
 .
+(/usr/local/texlive/2011/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
+Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 366.
 
-(/usr/local/texlive/2011/../texmf-local/tex/latex/local/acm_proc_article-sp.cls
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/epsfig.sty
-Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 210mm x 297mm (a4) paper.
+-- Using DVI output.
+\@IEEEnormalsizeunitybaselineskip=\dimen104
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen105
+\CLASSINFOnormalsizeunitybaselineskip=\dimen106
+\IEEEnormaljot=\dimen107
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
+\IEEEilabelindentA=\dimen108
+\IEEEilabelindentB=\dimen109
+\IEEEilabelindent=\dimen110
+\IEEEelabelindent=\dimen111
+\IEEEdlabelindent=\dimen112
+\IEEElabelindent=\dimen113
+\IEEEiednormlabelsep=\dimen114
+\IEEEiedmathlabelsep=\dimen115
+\IEEEiedtopsep=\skip41
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@IEEEsubequation=\count85
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count86
+\c@table=\count87
+\@IEEEeqnnumcols=\count88
+\@IEEEeqncolcnt=\count89
+\@IEEEtmpitemindent=\dimen116
+\c@IEEEbiography=\count90
+\@IEEEtranrubishbin=\box26
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks16
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -42,26 +132,20 @@ Package graphics Info: Driver file: dvips.def on input line 91.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen102
-\Gin@req@width=\dimen103
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
 )
-\epsfxsize=\dimen104
-\epsfysize=\dimen105
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen119
+\extrarowheight=\dimen120
+\NC@list=\toks17
+\extratabsurround=\skip44
+\backup@length=\skip45
 )
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2009/06/22 v3.00
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
-\@emptytoks=\toks15
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
-))
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip41
+\@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -69,135 +153,56 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks16
-\ex@=\dimen106
+\@emptytoks=\toks18
+\ex@=\dimen121
 ))
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen107
+\pmbraise@=\dimen122
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count79
+\inf@bad=\count91
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count80
-\leftroot@=\count81
+\uproot@=\count92
+\leftroot@=\count93
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count82
-\DOTSCASE@=\count83
+\classnum@=\count94
+\DOTSCASE@=\count95
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen108
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen123
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count84
-\c@MaxMatrixCols=\count85
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
 \dotsspace@=\muskip10
-\c@parentequation=\count86
-\dspbrk@lvl=\count87
-\tag@help=\toks17
-\row@=\count88
-\column@=\count89
-\maxfields@=\count90
-\andhelp@=\toks18
-\eqnshift@=\dimen109
-\alignsep@=\dimen110
-\tagshift@=\dimen111
-\tagwidth@=\dimen112
-\totwidth@=\dimen113
-\lineht@=\dimen114
-\@envbody=\toks19
-\multlinegap=\skip42
-\multlinetaggap=\skip43
-\mathdisplay@stack=\toks20
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks19
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks20
+\eqnshift@=\dimen124
+\alignsep@=\dimen125
+\tagshift@=\dimen126
+\tagwidth@=\dimen127
+\totwidth@=\dimen128
+\lineht@=\dimen129
+\@envbody=\toks21
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-Document Class 'acm_proc_article-sp' <22nd. April '09>. Modified by G.K.M. Tobi
-n
-Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
-shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca
-Excerpts were taken from (Journal Style) 'esub2acm.cls'.
-****** Bugs/comments/suggestions to Gerry Murray -- murray@hq.acm.org ******
-\footheight=\dimen115
-\@maxsep=\dimen116
-\@dblmaxsep=\dimen117
-\aucount=\count91
-\originalaucount=\count92
-\auwidth=\dimen118
-\auskip=\dimen119
-\auskipcount=\count93
-\auskip=\dimen120
-\allauboxes=\dimen121
-\addauthors=\toks21
-\addauflag=\count94
-\subtitletext=\toks22
-\savesection=\count95
-\sectioncntr=\count96
-\c@figure=\count97
-\c@table=\count98
-\titleboxnotes=\toks23
-\titleboxnoteflag=\count99
-Document Class: acm_proc_article-sp 2009/04/22 - V3.2SP - based on esub2acm.sty
- <23 April 96>
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/latexsym.sty
-Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
-\symlasy=\mathgroup6
-LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
-(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
-)
-\@acmtitlebox=\box28
-\titlenotecount=\count100
-\tntoks=\toks24
-\tntokstwo=\toks25
-\tntoksthree=\toks26
-\tntoksfour=\toks27
-\tntoksfive=\toks28
-\catcount=\count101
-\copyrightnotice=\toks29
-\conf=\toks30
-\confinfo=\toks31
-\c@part=\count102
-\c@section=\count103
-\c@subsection=\count104
-\c@subsubsection=\count105
-\c@paragraph=\count106
-
-Using 'Abbrev' bibliography style
-LaTeX Info: Redefining \cite on input line 1236.
-\bibindent=\dimen122
-\colcntr=\count107
-\saveb@x=\box29
-\copyrtyr=\toks32
-\acmcopyr=\toks33
-\boilerplate=\toks34
-\copyrightetc=\toks35
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
-)
-LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/ae/t1aer.fd
-File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-)))
-(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/array.sty
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen123
-\extrarowheight=\dimen124
-\NC@list=\toks36
-\extratabsurround=\skip44
-\backup@length=\skip45
-)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen125
+\bigstrutjot=\dimen130
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
@@ -205,12 +210,12 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@ALC@unique=\count108
-\c@ALC@line=\count109
-\c@ALC@rem=\count110
-\c@ALC@depth=\count111
-\ALC@tlm=\skip46
-\algorithmicindent=\skip47
+\c@ALC@unique=\count103
+\c@ALC@line=\count104
+\c@ALC@rem=\count105
+\c@ALC@depth=\count106
+\ALC@tlm=\skip49
+\algorithmicindent=\skip50
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
@@ -218,179 +223,142 @@ nment
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count112
-\float@exts=\toks37
-\float@box=\box30
-\@float@everytoks=\toks38
-\@floatcapt=\box31
+\c@float@type=\count107
+\float@exts=\toks23
+\float@box=\box29
+\@float@everytoks=\toks24
+\@floatcapt=\box30
 )
-\@float@every@algorithm=\toks39
-\c@algorithm=\count113
+\@float@every@algorithm=\toks25
+\c@algorithm=\count108
 ) (./extended.aux)
 \openout1 = `extended.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 25.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
  (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 54.
-
-(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-Overfull \hbox (4.1823pt too wide) in paragraph at lines 61--65
-\T1/aer/m/n/9 niques--- \T1/aer/m/it/9 de-sign, method-olo-gies\T1/aer/m/n/9 ; 
-B.7.1 [\T1/aer/bx/n/9 Integrated Cir-cuits\T1/aer/m/n/9 ]:
- []
-
-
-Overfull \hbox (4.70436pt too wide) in paragraph at lines 61--65
-\T1/aer/m/n/9 Types and De-sign Styles--- \T1/aer/m/it/9 mem-ory tech-nolo-gies
-, de-sign\T1/aer/m/n/9 ; B.8.2
- []
-
-
-Overfull \hbox (1.59209pt too wide) in paragraph at lines 61--65
-\T1/aer/m/n/9 and De-sign Aids; C.3 [\T1/aer/bx/n/9 Special-Purpose and Applica
-tion-
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
 
 ]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 108.
-
-
-Underfull \vbox (badness 2698) has occurred while \output is active []
-
- [2]
-File: Images/profiling.eps Graphic file (type eps)
-
-<Images/profiling.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 171--172
+[2]
+File: Images/profiling2.eps Graphic file (type eps)
+ <Images/profiling2.eps>
+Overfull \hbox (6.0pt too wide) in paragraph at lines 134--135
  [][] 
  []
 
 [3]
-Overfull \hbox (5.15753pt too wide) in paragraph at lines 184--184
-[]\secfnt Design-time Sys-tem Sce-nario Iden-ti-fi-ca-tion
- []
-
 File: Images/1Dclustering.eps Graphic file (type eps)
-<Images/1Dclustering.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 189--190
+ <Images/1Dclustering.eps>
+Overfull \hbox (6.0pt too wide) in paragraph at lines 151--152
  [][] 
  []
 
 [4]
-File: Images/2Dclustering.eps Graphic file (type eps)
- <Images/2Dclustering.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 207--208
+File: Images/2DClustering.eps Graphic file (type eps)
+ <Images/2DClustering.eps>
+Overfull \hbox (6.0pt too wide) in paragraph at lines 168--169
  [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: Images/switching.eps Graphic file (type eps)
-
 <Images/switching.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 221--222
+Overfull \hbox (6.0pt too wide) in paragraph at lines 181--182
  [][] 
  []
 
 [5]
 File: Images/platform.eps Graphic file (type eps)
  <Images/platform.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 242--243
+Overfull \hbox (6.0pt too wide) in paragraph at lines 203--204
  [][] 
  []
 
 
-Overfull \hbox (16.12pt too wide) in alignment at lines 291--302
+Overfull \hbox (22.29027pt too wide) in alignment at lines 252--263
  [][][] []
  []
 
-[6]
-Overfull \hbox (9.58589pt too wide) in paragraph at lines 325--325
-[]\secfnt Presentation of Mul-ti-me-dia Bench-mark Ap-
- []
-
-
-Overfull \hbox (2.79369pt too wide) in paragraph at lines 366--366
-[]\secfnt Classification of Ap-pli-ca-tions Based on Ba-
- []
-
-[7]
+[6] [7]
 File: Images/6apps.eps Graphic file (type eps)
  <Images/6apps.eps>
-Overfull \hbox (22.08215pt too wide) in paragraph at lines 383--384
+Overfull \hbox (6.0pt too wide) in paragraph at lines 344--345
  [][] 
  []
 
 File: Images/6appsGains.eps Graphic file (type eps)
 <Images/6appsGains.eps>
-Overfull \hbox (22.08215pt too wide) in paragraph at lines 390--391
+Overfull \hbox (6.0pt too wide) in paragraph at lines 351--352
  [][] 
- []
-
-
-Overfull \hbox (34.12646pt too wide) in paragraph at lines 399--420
-[]  [] 
  []
 
 [8]
 File: Images/banks.ps Graphic file (type eps)
  <Images/banks.ps>
-Overfull \hbox (6.95992pt too wide) in paragraph at lines 429--430
+Overfull \hbox (5.99896pt too wide) in paragraph at lines 400--402
  [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2343) has occurred while \output is active []
 
 File: Images/usecase.eps Graphic file (type eps)
 
 <Images/usecase.eps>
-Overfull \hbox (6.96277pt too wide) in paragraph at lines 442--443
+Overfull \hbox (6.0pt too wide) in paragraph at lines 413--415
  [][] 
  []
 
-[9] (./extended.bbl)
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-(./extended.aux) ) 
-Here is how much of TeX's memory you used:
- 2244 strings out of 493634
- 25830 string characters out of 3143401
- 92226 words of memory out of 3000000
- 5494 multiletter control sequences out of 15000+200000
- 51038 words of font info for 64 fonts, out of 3000000 for 9000
- 831 hyphenation exceptions out of 8191
- 39i,10n,26p,2125b,561s stack positions out of 5000i,500n,10000p,200000b,50000s
+ [9]
+(./extended.bbl)
 
-Output written on extended.dvi (10 pages, 77128 bytes).
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[10] (./extended.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2551 strings out of 493634
+ 35684 string characters out of 3143401
+ 102217 words of memory out of 3000000
+ 5830 multiletter control sequences out of 15000+200000
+ 35688 words of font info for 95 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 32i,14n,24p,2130b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on extended.dvi (10 pages, 74284 bytes).

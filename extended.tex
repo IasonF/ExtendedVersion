@@ -1,9 +1,4 @@
-% REMEMBER HOWEVER: After having produced the .bbl file,
-% and prior to final submission,
-% you need to 'insert'  your .bbl file into your source .tex file so as to provide
-% ONE 'self-contained' source file.
-\documentclass{acm_proc_article-sp}
-
+\documentclass[a4paper,conference]{IEEEtran}
 
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -18,56 +13,25 @@
 
 \title{Exploration of energy efficient memory organisations for dynamic multimedia applications using system scenarios}
 
-%\numberofauthors{3} 
-%\author{
-%\alignauthor
-%Iason Filippopoulos\\
-%		\affaddr{Ph.D. student}\\
-%		\affaddr{NTNU}\\
-%       %\affaddr{Department of Electronics and Telecommunications}\\
-%       %\affaddr{Norwegian University of Science and Technology}\\
-%       \affaddr{Trondheim, Norway}\\
-%       \email{iason.filippopoulos@iet.ntnu.no} 
-%\alignauthor
-%Francky Catthoor\\
-%       \affaddr{IMEC}\\
-%       \affaddr{KU Leuven}\\
-%       \affaddr{Leuven, Belgium}\\
-%       \email{catthoor@imec.be}  
-%\alignauthor     
-%Per Gunnar Kjeldsberg\\
-%		\affaddr{Professor}\\
-%		\affaddr{NTNU}\\
-%       %\affaddr{Department of Electronics and Telecommunications}\\
-%       %\affaddr{Norwegian University of Science and Technology}\\
-%       \affaddr{Trondheim, Norway}\\
-%       \email{pgk@iet.ntnu.no}
-%}     
+\author{\IEEEauthorblockN{Iason Filippopoulos\IEEEauthorrefmark{1},
+Francky Catthoor\IEEEauthorrefmark{2} and
+Per Gunnar Kjeldsberg\IEEEauthorrefmark{1}}
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electronics and Telecommunications\\
+Norwegian University of Science and Technology,
+Trondheim, Norway\\ Email: iason.filippopoulos@iet.ntnu.no}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}IMEC, Kapeldreef 75, 3000 Leuven, Belgium\\}}
 
-\numberofauthors{1} 
-\author{
-\alignauthor
-Author names, email addresses and affiliation status\\
-		\affaddr{removed for the blind review process}\\
-}     
-
+% make the title area
 \maketitle
 
 %Re-written by PGK
 \begin{abstract}
 We propose a memory-aware system scenario approach that exploits variations in memory needs during the lifetime of an application in order to optimize energy usage. Different system scenarios capture the application's different resource requirements which change dynamically at runtime. In addition to computational resources, the many possible memory platform configurations and data-to-memory assignments are important system scenario parameters. Here we present an extended memory model that includes existing state-of-the-art memories, available in the industry and academia, and show how it is employed during the system design exploration phase. Both commercial SRAM and standard cell based memory models are explored in this study. The effectiveness of the proposed methodology is demonstrated and tested using a large set of multimedia benchmarks published in the Polybench, Mibench and Mediabench suites. Reduction in energy consumption in the memory subsystem ranges from 35\% to 55 \% for the chosen set of benchmarks.
 \end{abstract}
+\IEEEpeerreviewmaketitle
 
-\category{D.2.2}{Software Engineering}{Design Tools and Techniques}[design, methodologies]
-\category{B.7.1}{Integrated Circuits}{Types and Design Styles}[memory technologies, design]
-\category{B.8.2}{Performance and Reliability}{Performance Analysis and Design Aids}
-\category{C.3}{Special-Purpose and Application-Based Systems}{Real-time and embedded systems }
+%\keywords{system scenarios, design space exploration, reconfigurable design, memory reconfiguration, dynamic multimedia applications} 
 
-\terms{Design, Algorithms, Measurement}
-
-\keywords{system scenarios, design space exploration, reconfigurable design, memory reconfiguration, dynamic multimedia applications} % NOT required for Proceedings
-\vfill
-%\columnbreak
 \section{Introduction}
 \label{sec:introduction}
 
@@ -105,7 +69,7 @@ In addition, modern applications exhibit more and more dynamic behaviour, which 
 %F: motivation example added
 To illustrate the aforementioned sub-optimal conventional allocation and assignment of data, the simple example of Alg.~\ref{alg:motivation} is used. The kernel code of an image processing application continuously reads a sequence of images, saves each image on the memory and performs a \textit{foo} function on each pixel of the image. Typically arrays are used for storing the intermediate calculations in image processing applications, i.e. \textit{array} variable on the motivation example. The memory size used for the storage of each initial \textit{image} and the computed \textit{array} are defined by the dimensions of the input image and can be potentially different for a series of input images. In a conventional assignment the highest values of \textit{height} and \textit{width} are identified and a static compiling results in allocation of the worst-case area for the \textit{array} variable. However, only a part of the allocated space is accessed during processing of smaller images. 
 
-\begin{algorithm}[]
+\begin{algorithm}[!t]
 \caption{Motivation example of dynamic memory usage}
  \label{alg:motivation}
  \begin{algorithmic}[1]
@@ -167,8 +131,7 @@ The system scenario methodology follows a two stage exploration, namely design-t
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=0.49\textwidth]{Images/profiling2.eps}
-\epsfig{file=Images/profiling.eps, width=0.49\textwidth}
+\includegraphics[width=0.50\textwidth]{Images/profiling2.eps}
 \caption{Profiling results based on application code and input data.}
 \label{fig:profiling}
 \end{figure}
@@ -185,8 +148,7 @@ In Fig.~\ref{fig:profiling} the profiled applications are two image related mult
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=0.49\textwidth]{Images/1Dclustering.eps}
-\epsfig{file=Images/1Dclustering.eps, width=0.49\textwidth}
+\includegraphics[width=0.50\textwidth]{Images/1Dclustering.eps}
 \caption{Clustering of profiling (a) results into three (b) or four (c) system scenarios}
 \label{fig:clustering}
 \end{figure}
@@ -203,8 +165,7 @@ A Pareto space is used for clustering that also includes the energy cost metric.
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=0.49\textwidth]{Images/2DClustering.eps}
-\epsfig{file=Images/2Dclustering.eps, width=0.49\textwidth}
+\includegraphics[width=0.50\textwidth]{Images/2DClustering.eps}
 \caption{Clustering of Pareto curves}
 \label{fig:pareto}
 \end{figure}
@@ -217,29 +178,29 @@ Switching decisions are taken at run-time by the run-time manager. The switching
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=0.49\textwidth]{Images/switching.eps}
-\epsfig{file=Images/switching.eps, width=0.49\textwidth}
+\includegraphics[width=0.50\textwidth]{Images/switching.eps}
 \caption{Runtime system scenario prediction and switching based on the current input}
 \label{fig:runtime}
 \end{figure}
 
 In Fig.~\ref{fig:profiling} an example of the run-time phase of the methodology is depicted. The runtime manager identifies the size of the image that will be processed and reconfigures the memory subsystem on the platform, if needed, by increasing or decreasing the available memory size. The reconfiguration options are effected by platform hardware limitations. The image size is the data variable monitored in order to detect the system scenario and the need for switching.
 
-\section{Target Platform and energy \\ models}
+\section{Target Platform and energy models}
 \label{sec:platform}
 
 Selection of target platform is an important aspect of the memory-aware system scenario methodology. The key feature needed in the platform architecture is the ability to efficiently support different memory sizes that correspond to the system scenarios generated by the methodology. Execution of different system scenarios then leads to different energy costs, as each configuration of the platform results in a specific memory energy consumption. The dynamic memory platform is achieved by organising the memory area in a varying number of banks that can be switched between different energy states. 
-\vfill
+
 \subsection{Architecture}
 
-In this work, a clustered memory organisations with up to five memory banks of varying sizes is explored. The limitation in the number of memory banks is necessary in order to keep the interconnection cost between the processing element (PE) and the memories constant through exploration of different architectures. For more complex architectures the interconnection cost should be considered and analysed separately for accurate results. Although power gating can be applied to the bus when only a part of a longer bus is needed, an accurate model of the memory wrapper and interconnection must developed, which is beyond the scope of the current work. 
+In this work, a clustered memory organisations with up to five memory banks of varying sizes is explored. The limitation in the number of memory banks is necessary in order to keep the interconnection cost between the processing element (PE) and the memories constant through exploration of different architectures. 
+
+For more complex architectures the interconnection cost should be considered and analysed separately for accurate results. Although power gating can be applied to the bus when only a part of a longer bus is needed, an accurate model of the memory wrapper and interconnection must developed, which is beyond the scope of the current work. 
 
 An example of the exploration of the memory platform is shown in Fig.~\ref{fig:platform}. Point-to-point connections between elements are assumed and the interconnection cost is kept negligible for up to five memory banks.
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=0.49\textwidth]{Images/platform.eps}
-\epsfig{file=Images/platform.eps, width=0.49\textwidth}
+\includegraphics[width=0.50\textwidth]{Images/platform.eps}
 \caption{Exploration of memory clustering into varying number of banks}
 \label{fig:platform}
 \end{figure}
@@ -377,56 +338,67 @@ The second metric used for identification of different kinds of dynamism is the 
 The memory aware system scenario methodology is applied to all the presented benchmark applications to study its effectiveness. The profiling phase is based on different input for the data variables shown in Tab.~\ref{tab:applications} and is followed by the clustering phase. The clustering is performed with one to five system scenarios. All potentially energy efficient configurations are tested for a given number of scenarios. For example, in the case of 2 scenarios all possible memory platforms with 2 memory banks that fulfil the memory size requirement of the worst case are generated and tested. The same procedure is performed for 3, 4 and 5 scenarios. The exploration includes memories of different sizes, technologies and varying word lengths. 
 
 The normalized energy consumption in the memory subsystem is shown in Fig.~\ref{fig:energy} while the energy gain percentages are presented in Fig.~\ref{fig:gains}. Energy gains are compared to a static platform configuration, i.e., a platform with only 1 scenario, which corresponds to zero percentage gain in Fig.~\ref{fig:gains}. Only the optimal configuration is presented for each number of system scenarios. The energy is normalized for each application separately. Gains are reported compared to the case of the fixed non-re-configurable platform.
+
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=0.49\textwidth]{Images/6apps.eps}
-\epsfig{file=Images/6apps.eps, width=0.52\textwidth}
+\includegraphics[width=0.50\textwidth]{Images/6apps.eps}
 \caption{Energy consumption per number of memory banks - Energy is normalized per application}
 \label{fig:energy}
 \end{figure}
+
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=0.49\textwidth]{Images/6appsGains.eps}
-\epsfig{file=Images/6appsGains.eps, width=0.52\textwidth}
+\includegraphics[width=0.50\textwidth]{Images/6appsGains.eps}
 \caption{Energy gain for increasing number of system scenarios - Static platform corresponds to 0\%}
 \label{fig:gains}
 \end{figure}
+
 \begin{center}
 	\begin{table*}[!t]
 	\caption{Range of energy gains on the memory subsystem}
 	\label{tab:ranges}
 	{\small
 	\hfill{}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
 		\hline
 		\multicolumn{2}{|c|}{\textbf{EPIC}} &
 		\multicolumn{2}{c|}{\textbf{Motion}} &
 		\multicolumn{2}{c|}{\textbf{Blowfish}} &
-		\multicolumn{2}{c|}{\textbf{Jacobi}} &
-		\multicolumn{2}{c|}{\textbf{Mesa3D}} &
+		\multicolumn{2}{c|}{\textbf{Jacobi}}
+		\\ 
+		\cline{1-8}
+		Min & Max & Min & Max & Min & Max & 
+		Min & Max \\ 
+		\hline 
+		41.9\% & 56.3\% & 32.4\% & 52.1\% & 25.3\% & 43.3\% & 
+		21.2\% & 37.5\% \\ 
+		\hline 
+
+		\multicolumn{2}{|c|}{\textbf{Mesa3D}} &
 		\multicolumn{2}{c|}{\textbf{JPEG}} &
 		\multicolumn{2}{c|}{\textbf{PGP}} &
 		\multicolumn{2}{c|}{\textbf{Viterbi}} \\ 
-		\cline{1-16}
+		\cline{1-8}
 		Min & Max & Min & Max & Min & Max & 
-		Min & Max & Min & Max & Min & Max & 
-		Min & Max & Min & Max\\ 
+		Min & Max \\ 
 		\hline 
-		41.9\% & 56.3\% & 32.4\% & 52.1\% & 25.3\% & 43.3\% & 
-		21.2\% & 37.5\% & 32.5\% & 50.8\% & 33.0\% & 49.9\% & 
+		32.5\% & 50.8\% & 33.0\% & 49.9\% & 
 		32.2\% & 52.3\% & 13.8\% & 43.5\% \\ 
 		\hline 
-	\end{tabular}}
+		
+	\end{tabular}
+	\hfill{}}
 	\end{table*}
 \end{center}
+
 The introduction of a second system scenario results in energy gains between 15\% and  40\%  for the tested applications. Depending on the application's dynamism the maximum reported energy gains range from around 35\% to 55\%. As expected according to the categorisation presented in subsection~\ref{sec:categorisation}, higher energy gains are achieved for applications with more dynamic memory requirements, i.e., bigger difference between the minimum and maximum allocated size. The maximum gains for JPEG, motion estimator, mesa 3D and PGP are around 50\% while blowfish, jacobi, and Viterbi decoders are around 40\%.
 
 As the number of system scenarios that are implemented on the memory subsystem increases, the energy gains improve since variations in memory requirements can be better exploited with more configurations. However, the improvement with increasing numbers of system scenarios differ depending on the kind of dynamism present on each application. The application with the highest variation in distribution of memory requirements is the Viterbi encoder/decoder and gains around 10\% is seen for every new memory bank added, even for a platform growing from four to five banks. In contrast, the application with the lowest number of different cases, blowfish, cannot further exploit a platform with more than three banks. Another case in which smaller energy gains are achieved, after a certain number of platform supported system scenarios have been reached, is the PGP encryption algorithm. In this benchmark the introduction of more scenarios has an energy impact of less than 5\% after the limit of three system scenarios has been reached. The switching cost increases for an increasing number of system scenarios, but the energy gains compensate for the overhead of system scenario switching, which is below 2\% for the maximum number of banks in all cases. The most efficient of the tested organisations for each benchmark are presented in Fig.~\ref{fig:banks}, where each memory bank is depicted with a different color and each length is proportional to the memory bank size. The blowfish decoder is the only benchmark that has only 3 banks on its most efficient memory organisation. In Tab.~\ref{tab:applications} the minimum and maximum energy gains for each benchmark application are shown. 
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=0.49\textwidth]{Images/banks.pdf}
-\psfig{file=Images/banks.ps, angle=270, width=0.49\textwidth}
+\includegraphics[angle=270, width=0.50\textwidth]{Images/banks.ps}
+%\psfig{file=Images/banks.ps, angle=270, width=0.50\textwidth}
 \caption{Bank sizes for the most efficient of the tested organisations for each benchmark}
 \label{fig:banks}
 \end{figure}
@@ -438,8 +410,8 @@ The reported energy gains are for the memory subsystem. As reported in Section~\
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=0.49\textwidth]{Images/usecase.eps}
-\epsfig{file=Images/usecase.eps, width=0.49\textwidth}
+\includegraphics[width=0.50\textwidth]{Images/usecase.eps}
+%\includegraphics{file=Images/usecase.eps, width=0.50\textwidth}
 \caption{Energy gain for use case scenarios and system scenarios}
 \label{fig:usecase}
 \end{figure}
@@ -449,10 +421,7 @@ The reported energy gains are for the memory subsystem. As reported in Section~\
 
 The scope of this work is to apply the memory-aware system scenario methodology to a wide range of multimedia application and test its effectiveness based on an extensive memory energy model. A wide range of applications is studied that allow us to draw conclusions about different kinds of dynamic behaviour and their effect on the energy gains of the methodology. The achieved results demonstrate the effectiveness of the methodology reducing the memory energy consumption with between 35\% and 55\%. Since memory size requirements are still met in all situations, performance is not reduced. The memory-aware system scenario methodology is suited for applications that experience dynamic behaviour with respect to memory organisation utilization during their execution.
 
-
-%\bibliographystyle{IEEEtran}
-\bibliographystyle{abbrv}
-\bibliography{reference}
-%\balancecolumns
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,reference.bib}
 
 \end{document}
