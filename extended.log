@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  16 JUN 2013 19:54
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  16 JUN 2013 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -264,39 +264,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 [2]
 File: Images/profiling2.eps Graphic file (type eps)
- <Images/profiling2.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 147--148
- [][] 
- []
-
-[3]
+ <Images/profiling2.eps> [3]
 File: Images/1Dclustering.eps Graphic file (type eps)
  <Images/1Dclustering.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 164--165
- [][] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[4]
+ [4]
 File: Images/2DClustering.eps Graphic file (type eps)
- <Images/2DClustering.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 182--183
- [][] 
- []
 
+<Images/2DClustering.eps>
 File: Images/switching.eps Graphic file (type eps)
-<Images/switching.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 195--196
- [][] 
- []
-
-[5]
+ <Images/switching.eps> [5]
 File: Images/platform.eps Graphic file (type eps)
  <Images/platform.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 217--218
- [][] 
- []
-
-
 Overfull \hbox (22.29027pt too wide) in alignment at lines 266--277
  [][][] []
  []
@@ -307,40 +287,18 @@ Overfull \hbox (10.72705pt too wide) in paragraph at lines 331--354
  []
 
 [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: Images/6apps.eps Graphic file (type eps)
-
-<Images/6apps.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 384--385
- [][] 
- []
-
+ <Images/6apps.eps>
 File: Images/6appsGains.eps Graphic file (type eps)
-<Images/6appsGains.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 391--392
- [][] 
- []
-
-[8]
+ <Images/6appsGains.eps> [8]
 File: Images/banks.ps Graphic file (type eps)
  <Images/banks.ps>
-Overfull \hbox (5.99896pt too wide) in paragraph at lines 440--442
- [][] 
- []
-
-
-Underfull \vbox (badness 1303) has occurred while \output is active []
+Underfull \vbox (badness 1917) has occurred while \output is active []
 
  [9]
 File: Images/usecase.eps Graphic file (type eps)
 
-<Images/usecase.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 453--455
- [][] 
- []
-
-(./extended.bbl [10])
+<Images/usecase.eps> (./extended.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -352,16 +310,14 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
-
-] (./extended.aux) ) 
+[10] (./extended.aux) ) 
 Here is how much of TeX's memory you used:
  2553 strings out of 493634
  35706 string characters out of 3143401
- 103217 words of memory out of 3000000
+ 104217 words of memory out of 3000000
  5832 multiletter control sequences out of 15000+200000
  35688 words of font info for 95 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  32i,14n,24p,2130b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (11 pages, 76000 bytes).
+Output written on extended.dvi (10 pages, 76044 bytes).

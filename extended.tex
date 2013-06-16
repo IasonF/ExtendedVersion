@@ -144,7 +144,7 @@ The system scenario methodology follows a two stage exploration, namely design-t
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.50\textwidth]{Images/profiling2.eps}
+\includegraphics[width=0.47\textwidth]{Images/profiling2.eps}
 \caption{Profiling results based on application code and input data.}
 \label{fig:profiling}
 \end{figure}
@@ -155,13 +155,13 @@ The profiling stage is depicted in Fig.~\ref{fig:profiling} and consists of runn
 
 Given code and database as inputs, profiling will show memory usage during execution time by running the application using the whole database as an input. Results provided to the designer include complete information about allocated memory size values together with the number of occurrences and duration for each of these memory size values. Moreover, correlation between input data variable values and the resulting memory behaviour can possibly be observed. This information is useful for the clustering step that follows. 
 
-In Fig.~\ref{fig:profiling} the profiled applications are two image related multimedia benchmarks and the input database should consist of a variety of images. The memory requirements in each case are driven by the current input image size, which is classified as a data variable due to the wide range of its possible values. 
+In Fig.~\ref{fig:profiling} the profiled applications are two image related multimedia benchmarks and the input database should consist of a variety of images. The memory requirements in each case are driven by the current input image size, which is classified as a data variable due to the wide range of its possible values. Depending on the application the whole image or a region of interest is processed. An alternative variable could be the SNR level on the channel in the case of an encoding/decoding application.
 
 \subsection{Design-time System Scenario Identification and Prediction Based on Data Variables}
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.50\textwidth]{Images/1Dclustering.eps}
+\includegraphics[width=0.47\textwidth]{Images/1Dclustering.eps}
 \caption{Clustering of profiling (a) results into three (b) or four (c) system scenarios}
 \label{fig:clustering}
 \end{figure}
@@ -179,7 +179,7 @@ A Pareto space is used for clustering that also includes the energy cost metric.
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.50\textwidth]{Images/2DClustering.eps}
+\includegraphics[width=0.47\textwidth]{Images/2DClustering.eps}
 \caption{Clustering of Pareto curves}
 \label{fig:pareto}
 \end{figure}
@@ -192,7 +192,7 @@ Switching decisions are taken at run-time by the run-time manager. The switching
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.50\textwidth]{Images/switching.eps}
+\includegraphics[width=0.47\textwidth]{Images/switching.eps}
 \caption{Runtime system scenario prediction and switching based on the current input}
 \label{fig:runtime}
 \end{figure}
@@ -214,7 +214,7 @@ Some examples of alternative memory platforms that can be used for exploration i
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.50\textwidth]{Images/platform.eps}
+\includegraphics[width=0.47\textwidth]{Images/platform.eps}
 \caption{Exploration of memory clustering into varying number of banks}
 \label{fig:platform}
 \end{figure}
@@ -319,9 +319,9 @@ The exploration of different options on memory organisation is performed using t
 
 The applications that benefit most from the memory-aware system scenario methodology are characterised by having dynamic utilization of the memory organisation during their execution. Multimedia applications often exhibit such a dynamic variation on memory requirements during their lifetime and consequentially are suitable candidates for the presented methodology. The effectiveness is demonstrated and tested using a variety of open multimedia benchmarks, which can be found in the Polybench (\cite{Poly}), Mibench (\cite{mibench}) and Mediabench(\cite{mediabench}) benchmark suites. 
 
-\subsection{Presentation of Multimedia Benchmark Applications and their Input Databases}
+\subsection{Presentation of Multimedia Benchmark Applications and Corresponding Input Databases}
 
-An overview of the benchmark applications that were tested is presented in Tab.~\ref{tab:applications}. Two key parameters under consideration are the dynamic data variable of each application and the variation in the memory requirement it causes. The dynamic data variable is the variable that results in different system scenarios due to its range of values. Examples of such a variable are an input image of varying size or data dependent loop bound values. For each application an appropriate input database is constructed. The memory size limits are defined as the minimum and maximum storage requirement occurred during testing of an application.
+An overview of the benchmark applications that were tested is presented in Tab.~\ref{tab:applications}. Two key parameters under consideration are the dynamic data variable of each application and the variation in the memory requirement it causes. The dynamic data variable is the variable that results in different system scenarios due to its range of values. Examples of such a variable are an input image of varying size or data dependent loop bound values. For each application an appropriate input database is constructed with realistic RTS cases. The memory size limits are defined as the minimum and maximum storage requirement occurred during testing of an application.
 
 \begin{center}
 \begin{table*}[!t]
@@ -354,11 +354,11 @@ Viterbi encoder & Open & Constraint length & 5121 - 14337 & Low & good \\
 \end{table*}
 \end{center}
 
-\textit{EPIC (Efficient Pyramid Image Coder) image compression} can compress all possible sizes of images. The size of the input image has an effect on memory requirements during compression and several images were given as inputs. \textit{Motion estimation} is another media application in which image size is the dynamic data variable. In this case the image defines the area that has to be explored for determining the motion vectors and different images are tested.
+\textit{EPIC (Efficient Pyramid Image Coder) image compression} can compress all possible sizes of images. The size of the input image has an effect on memory requirements during compression and several images were given as inputs. \textit{Motion estimation} is another media application in which image size is the dynamic data variable. In this case the image defines the area that has to be explored for determining the motion vectors and different images are tested. The input database is constructed using publicly available images commonly used for testing this algorithm.
 
-The dynamism in the \textit{blowfish decoder} benchmark is a result of variations in the input file that is decoded. Again, the methodology explores the behaviour for several input files in order to identify system scenarios. The \textit{Jacobi 1D decomposition} algorithm can be executed using a varying number of steps with a direct effect on memory usage and is hence another suitable benchmark for the system scenario methodology. \textit{Mesa 3D} is an open graphics library with a dynamic loop bound in its kernel that provides the desired dynamic behaviour. 
+The dynamism in the \textit{blowfish decoder} benchmark is a result of variations in the input file that is decoded. Again, the methodology explores the behaviour for several input files in order to identify system scenarios. The \textit{Jacobi 1D decomposition} algorithm can be executed using a varying number of steps with a direct effect on memory usage and is hence another suitable benchmark for the system scenario methodology. The input database is constructed in order to increase the number of steps on every next iteration. \textit{Mesa 3D} is an open graphics library with a dynamic loop bound in its kernel that provides the desired dynamic behaviour. 
 
-The discrete cosine transformation (DCT) block used in the \textit{JPEG compression} algorithm has a memory footprint that is heavily influenced by the block size. For the \textit{PGP encryption} algorithm its encryption length parameter has an important impact on memory size, which can be exploited using system scenarios. The effect of the channel SNR level on the constraint length value of the \textit{Viterbi encoder} algorithm is discussed in \cite{Fil12}. Increasing noise on the channel demands a more complex encoding in order to maintain a constant bit error rate (BER), which consequentially increases the memory requirements during execution. The memory size variation is given for execution under different SNR levels.  
+The discrete cosine transformation (DCT) block used in the \textit{JPEG compression} algorithm has a memory footprint that is heavily influenced by the block size. The input database consists of an ascending size sequence of blocks. For the \textit{PGP encryption} algorithm its encryption length parameter has an important impact on memory size, which can be exploited using system scenarios. Thus, we create a database starting from the lowest encryption length value and gradually increasing it. The effect of the channel SNR level on the constraint length value of the \textit{Viterbi encoder} algorithm is discussed in \cite{Fil12}. Increasing noise on the channel demands a more complex encoding in order to maintain a constant bit error rate (BER), which consequentially increases the memory requirements during execution. The memory size variation is given for execution under different SNR levels.  
 
 %F: Meta-scenarios
 \subsection{Classification of Applications Based on Dynamic Characteristics}
@@ -381,14 +381,14 @@ Energy gains are compared to the case of a fixed non-re-configurable platform, i
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.50\textwidth]{Images/6apps.eps}
+\includegraphics[width=0.47\textwidth]{Images/6apps.eps}
 \caption{Energy consumption per number of memory banks - Energy is normalized per application}
 \label{fig:energy}
 \end{figure}
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.50\textwidth]{Images/6appsGains.eps}
+\includegraphics[width=0.47\textwidth]{Images/6appsGains.eps}
 \caption{Energy gain for increasing number of system scenarios - Static platform corresponds to 0\%}
 \label{fig:gains}
 \end{figure}
@@ -437,8 +437,8 @@ As the number of system scenarios that are implemented on the memory subsystem i
 
 \begin{figure}[!t]
 \centering
-\includegraphics[angle=270, width=0.50\textwidth]{Images/banks.ps}
-%\psfig{file=Images/banks.ps, angle=270, width=0.50\textwidth}
+\includegraphics[angle=270, width=0.47\textwidth]{Images/banks.ps}
+%\psfig{file=Images/banks.ps, angle=270, width=0.47\textwidth}
 \caption{Bank sizes for the most efficient of the tested organisations for each benchmark}
 \label{fig:banks}
 \end{figure}
@@ -450,8 +450,8 @@ The reported energy gains are for the memory subsystem. As reported in Section~\
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=0.50\textwidth]{Images/usecase.eps}
-%\includegraphics{file=Images/usecase.eps, width=0.50\textwidth}
+\includegraphics[width=0.47\textwidth]{Images/usecase.eps}
+%\includegraphics{file=Images/usecase.eps, width=0.47\textwidth}
 \caption{Energy gain for use case scenarios and system scenarios}
 \label{fig:usecase}
 \end{figure}
@@ -462,6 +462,6 @@ The reported energy gains are for the memory subsystem. As reported in Section~\
 The scope of this work is to apply the memory-aware system scenario methodology to a wide range of multimedia application and test its effectiveness based on an extensive memory energy model. A wide range of applications is studied that allow us to draw conclusions about different kinds of dynamic behaviour and their effect on the energy gains achieved using the methodology. The results demonstrate the effectiveness of the methodology reducing the memory energy consumption with between 35\% and 55\%. Since memory size requirements are still met in all situations, performance is not reduced. The memory-aware system scenario methodology is suited for applications that experience dynamic behaviour with respect to memory organisation utilization during their execution.
 
 \bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv,reference.bib}
+\bibliography{reference.bib}
 
 \end{document}
