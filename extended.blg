@@ -16,45 +16,45 @@ Warning--empty title in Pal06
 Warning--empty booktitle in graybox
 
 Done.
-You've used 27 entries,
+You've used 28 entries,
             4039 wiz_defined-function locations,
-            1379 strings with 20298 characters,
-and the built_in function-call counts, 20381 in all, are:
-= -- 1564
-> -- 528
-< -- 159
-+ -- 276
-- -- 96
-* -- 978
-:= -- 2972
-add.period$ -- 57
-call.type$ -- 27
-change.case$ -- 25
-chr.to.int$ -- 375
-cite$ -- 29
-duplicate$ -- 1490
-empty$ -- 1752
-format.name$ -- 121
-if$ -- 4747
+            1386 strings with 20384 characters,
+and the built_in function-call counts, 21108 in all, are:
+= -- 1631
+> -- 540
+< -- 166
++ -- 282
+- -- 98
+* -- 1015
+:= -- 3094
+add.period$ -- 59
+call.type$ -- 28
+change.case$ -- 26
+chr.to.int$ -- 387
+cite$ -- 30
+duplicate$ -- 1546
+empty$ -- 1805
+format.name$ -- 124
+if$ -- 4911
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 271
-newline$ -- 104
-num.names$ -- 27
-pop$ -- 666
+int.to.str$ -- 28
+missing$ -- 280
+newline$ -- 107
+num.names$ -- 28
+pop$ -- 679
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1564
+skip$ -- 1619
 stack$ -- 0
-substring$ -- 890
-swap$ -- 1177
-text.length$ -- 34
+substring$ -- 919
+swap$ -- 1226
+text.length$ -- 37
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 27
+type$ -- 28
 warning$ -- 2
-while$ -- 91
-width$ -- 29
-write$ -- 268
+while$ -- 96
+width$ -- 30
+write$ -- 279
 (There were 2 warnings)

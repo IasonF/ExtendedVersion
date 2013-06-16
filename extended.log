@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  13 JUN 2013 16:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  16 JUN 2013 19:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -265,78 +265,82 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [2]
 File: Images/profiling2.eps Graphic file (type eps)
  <Images/profiling2.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 145--146
+Overfull \hbox (6.0pt too wide) in paragraph at lines 147--148
  [][] 
  []
 
 [3]
 File: Images/1Dclustering.eps Graphic file (type eps)
  <Images/1Dclustering.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 162--163
+Overfull \hbox (6.0pt too wide) in paragraph at lines 164--165
  [][] 
  []
 
 [4]
 File: Images/2DClustering.eps Graphic file (type eps)
  <Images/2DClustering.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 180--181
+Overfull \hbox (6.0pt too wide) in paragraph at lines 182--183
  [][] 
  []
 
 File: Images/switching.eps Graphic file (type eps)
 <Images/switching.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 193--194
+Overfull \hbox (6.0pt too wide) in paragraph at lines 195--196
  [][] 
  []
 
 [5]
 File: Images/platform.eps Graphic file (type eps)
  <Images/platform.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 215--216
+Overfull \hbox (6.0pt too wide) in paragraph at lines 217--218
  [][] 
  []
 
 
-Overfull \hbox (22.29027pt too wide) in alignment at lines 264--275
+Overfull \hbox (22.29027pt too wide) in alignment at lines 266--277
  [][][] []
  []
 
 [6]
-Overfull \hbox (10.72705pt too wide) in paragraph at lines 327--350
+Overfull \hbox (10.72705pt too wide) in paragraph at lines 331--354
 []  [] 
  []
 
 [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 File: Images/6apps.eps Graphic file (type eps)
- <Images/6apps.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 380--381
+
+<Images/6apps.eps>
+Overfull \hbox (6.0pt too wide) in paragraph at lines 384--385
  [][] 
  []
 
 File: Images/6appsGains.eps Graphic file (type eps)
 <Images/6appsGains.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 387--388
+Overfull \hbox (6.0pt too wide) in paragraph at lines 391--392
  [][] 
  []
 
 [8]
 File: Images/banks.ps Graphic file (type eps)
  <Images/banks.ps>
-Overfull \hbox (5.99896pt too wide) in paragraph at lines 436--438
- [][] 
- []
-
-File: Images/usecase.eps Graphic file (type eps)
-<Images/usecase.eps>
-Overfull \hbox (6.0pt too wide) in paragraph at lines 449--451
+Overfull \hbox (5.99896pt too wide) in paragraph at lines 440--442
  [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1303) has occurred while \output is active []
 
  [9]
-(./extended.bbl)
+File: Images/usecase.eps Graphic file (type eps)
+
+<Images/usecase.eps>
+Overfull \hbox (6.0pt too wide) in paragraph at lines 453--455
+ [][] 
+ []
+
+(./extended.bbl [10])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -348,14 +352,16 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[10] (./extended.aux) ) 
+[11
+
+] (./extended.aux) ) 
 Here is how much of TeX's memory you used:
- 2552 strings out of 493634
- 35700 string characters out of 3143401
+ 2553 strings out of 493634
+ 35706 string characters out of 3143401
  103217 words of memory out of 3000000
- 5831 multiletter control sequences out of 15000+200000
+ 5832 multiletter control sequences out of 15000+200000
  35688 words of font info for 95 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 32i,14n,24p,2130b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,14n,24p,2130b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (10 pages, 75308 bytes).
+Output written on extended.dvi (11 pages, 76000 bytes).

@@ -150,6 +150,10 @@ P.~Meinerzhagen, C.~Roth, and A.~Burg, ``Towards generic low-power
   and Systems (MWSCAS), 2010 53rd IEEE International Midwest Symposium
   on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2010, pp. 129--132.
 
+\bibitem{Gem5}
+N.~Binkert \emph{et~al.}, ``The gem5 simulator,'' \emph{SIGARCH Comput. Archit.
+  News}, vol.~39, no.~2, pp. 1--7, Aug. 2011.
+
 \bibitem{Poly}
 L.~Pouchet, ``Polybench: The polyhedral benchmark suite.''
 
