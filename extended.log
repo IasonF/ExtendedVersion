@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  17 JUN 2013 21:19
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  20 JUN 2013 19:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -314,4 +314,4 @@ Here is how much of TeX's memory you used:
  831 hyphenation exceptions out of 8191
  32i,14n,24p,2130b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (10 pages, 77592 bytes).
+Output written on extended.dvi (10 pages, 77580 bytes).
