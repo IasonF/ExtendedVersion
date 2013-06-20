@@ -39,8 +39,8 @@ R.~Gonzalez and M.~Horowitz, ``Energy dissipation in general purpose
 
 \bibitem{Che09}
 E.~Cheung \emph{et~al.}, ``Memory subsystem simulation in software tlm/t
-  models,'' in \emph{Design Automation Conference, 2009. ASP-DAC 2009. Asia and
-  South Pacific}, jan. 2009, pp. 811 --816.
+  models,'' in \emph{Asia and South Pacific Design Automation Conference, 2009.
+  Proceedings.}, jan. 2009, pp. 811 --816.
 
 \bibitem{Ben99}
 T.~Simunic \emph{et~al.}, ``Cycle-accurate simulation of energy consumption in
@@ -49,8 +49,8 @@ T.~Simunic \emph{et~al.}, ``Cycle-accurate simulation of energy consumption in
 
 \bibitem{Hul11}
 J.~Hulzink \emph{et~al.}, ``An ultra low energy biomedical signal processing
-  system operating at near-threshold,'' \emph{Biomedical Circuits and Systems,
-  IEEE Transactions on}, vol.~5, no.~6, pp. 546--554, 2011.
+  system operating at near-threshold,'' \emph{IEEE Trans on Biomedical Circuits
+  and Systems}, vol.~5, no.~6, pp. 546--554, 2011.
 
 \bibitem{Ang13}
 A.~Kritikakou \emph{et~al.}, ``A scalable and near-optimal representation for
@@ -59,8 +59,8 @@ A.~Kritikakou \emph{et~al.}, ``A scalable and near-optimal representation for
 
 \bibitem{Ben00b}
 L.~Benini, A.~Macii, and M.~Poncino, ``A recursive algorithm for low-power
-  memory partitioning,'' in \emph{Low Power Electronics and Design, 2000.
-  ISLPED '00. Proceedings of the 2000 Int. Symposium on}, 2000, pp. 78 -- 83.
+  memory partitioning,'' in \emph{Proceedings of the 2000 intr symp on Low
+  Power Electronics and Design}, 2000, pp. 78 -- 83.
 
 \bibitem{Ben00c}
 L.~Benini \emph{et~al.}, ``Increasing energy efficiency of embedded systems by
@@ -78,16 +78,15 @@ P.~R. Panda \emph{et~al.}, ``Data and memory optimization techniques for
   no.~2, pp. 149--206, Apr. 2001.
 
 \bibitem{Mar03}
-P.~Marchal \emph{et~al.}, ``Sdram-energy-aware memory allocation for dynamic
-  multi-media applications on multi-processor platforms,'' in \emph{Design,
-  Automation and Test in Europe Conference and Exhibition, 2003}, 2003, pp.
-  516--521.
+P.~Marchal \emph{et~al.}, ``{S}{D}{R}{A}{M} energy-aware memory allocation for
+  dynamic multi-media applications on multi-processor platforms,'' in
+  \emph{Design, Automation and Test in Europe}, 2003, pp. 516--521.
 
 \bibitem{Chu02}
 E.-Y. Chung \emph{et~al.}, ``Contents provider-assisted dynamic voltage scaling
   for low energy multimedia applications,'' in \emph{Proceedings of the 2002
-  international symposium on Low power electronics and design}, ser. ISLPED
-  '02, 2002, pp. 42--47.
+  intr symp on Low Power Electronics and Design}, ser. ISLPED '02, 2002, pp.
+  42--47.
 
 \bibitem{Gheorghita2007}
 S.~V. Gheorghita \emph{et~al.}, ``System-scenario-based design of dynamic
@@ -104,8 +103,9 @@ E.~Hammari \emph{et~al.}, ``Application of medium-grain multiprocessor mapping
   2010, pp. 1 --6.
 
 \bibitem{Pal06}
-M.~Palkovic, F.~Catthoor, and H.~Corporaal, in \emph{Proc. of the 4th Workshop
-  on Optimizations for DSP and Embedded Systems}.\hskip 1em plus 0.5em minus
+M.~Palkovic, F.~Catthoor, and H.~Corporaal, ``Dealing with variable trip count
+  loops in system level exploration,'' in \emph{Proc. of the 4th Workshop on
+  Optimizations for DSP and Embedded Systems}.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE and ACM SIGMICRO, 2006, pp. 21--30.
 
 \bibitem{Pal06b}
@@ -124,8 +124,9 @@ P.~Garcia \emph{et~al.}, ``An overview of reconfigurable hardware in embedded
   Jan. 2006.
 
 \bibitem{graybox}
-S.~Himpe \emph{et~al.}, ``Mtg and grey-box: modeling dynamic multimedia
-  applications with concurrency and non-determinism,'' 2002.
+S.~Himpe \emph{et~al.}, ``{M}{T}{G}* and grey-box: modeling dynamic multimedia
+  applications with concurrency and non-determinism,'' in \emph{System
+  Specification and Design Languages: Best of FDL02}, 2002.
 
 \bibitem{Ang13b}
 A.~Kritikakou \emph{et~al.}, ``Near-optimal and scalable intra-signal in-place

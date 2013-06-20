@@ -11,49 +11,46 @@ Database file #1: reference.bib.bib
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty title in Pal06
-Warning--empty booktitle in graybox
 
 Done.
 You've used 28 entries,
             4039 wiz_defined-function locations,
-            991 strings with 12009 characters,
-and the built_in function-call counts, 19882 in all, are:
-= -- 1596
+            992 strings with 12013 characters,
+and the built_in function-call counts, 19965 in all, are:
+= -- 1609
 > -- 388
 < -- 166
 + -- 212
 - -- 63
-* -- 933
-:= -- 3001
-add.period$ -- 59
+* -- 938
+:= -- 3021
+add.period$ -- 60
 call.type$ -- 28
-change.case$ -- 26
+change.case$ -- 27
 chr.to.int$ -- 387
-cite$ -- 30
-duplicate$ -- 1488
-empty$ -- 1735
+cite$ -- 28
+duplicate$ -- 1494
+empty$ -- 1742
 format.name$ -- 89
-if$ -- 4619
+if$ -- 4640
 int.to.chr$ -- 0
 int.to.str$ -- 28
-missing$ -- 245
+missing$ -- 246
 newline$ -- 107
 num.names$ -- 28
-pop$ -- 562
+pop$ -- 558
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1537
+skip$ -- 1543
 stack$ -- 0
-substring$ -- 919
-swap$ -- 1156
+substring$ -- 920
+swap$ -- 1163
 text.length$ -- 37
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 28
-warning$ -- 2
+warning$ -- 0
 while$ -- 96
 width$ -- 30
-write$ -- 279
-(There were 2 warnings)
+write$ -- 281

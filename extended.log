@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  16 JUN 2013 22:07
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  17 JUN 2013 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -255,34 +255,28 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+) [1
 
 
-]
-[2]
+] [2]
 File: Images/profiling2.eps Graphic file (type eps)
- <Images/profiling2.eps> [3]
-File: Images/1Dclustering.eps Graphic file (type eps)
- <Images/1Dclustering.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
+<Images/profiling2.eps> [3]
+File: Images/1Dclustering.ps Graphic file (type eps)
+ <Images/1Dclustering.ps> [4]
 File: Images/2DClustering.eps Graphic file (type eps)
 
 <Images/2DClustering.eps>
 File: Images/switching.eps Graphic file (type eps)
- <Images/switching.eps> [5]
+ <Images/switching.eps>
 File: Images/platform.eps Graphic file (type eps)
- <Images/platform.eps>
-Overfull \hbox (22.29027pt too wide) in alignment at lines 266--277
+ <Images/platform.eps> [5]
+Overfull \hbox (20.58414pt too wide) in alignment at lines 269--280
  [][][] []
  []
 
 [6]
-Overfull \hbox (10.72705pt too wide) in paragraph at lines 331--354
+Overfull \hbox (10.72705pt too wide) in paragraph at lines 334--357
 []  [] 
  []
 
@@ -313,11 +307,11 @@ Before submitting the final camera ready copy, remember to:
 [10] (./extended.aux) ) 
 Here is how much of TeX's memory you used:
  2553 strings out of 493634
- 35706 string characters out of 3143401
- 104217 words of memory out of 3000000
+ 35705 string characters out of 3143401
+ 103217 words of memory out of 3000000
  5832 multiletter control sequences out of 15000+200000
  35688 words of font info for 95 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  32i,14n,24p,2130b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (10 pages, 76044 bytes).
+Output written on extended.dvi (10 pages, 77592 bytes).
