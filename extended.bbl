@@ -39,13 +39,13 @@ R.~Gonzalez and M.~Horowitz, ``Energy dissipation in general purpose
 
 \bibitem{Che09}
 E.~Cheung \emph{et~al.}, ``Memory subsystem simulation in software tlm/t
-  models,'' in \emph{Asia and South Pacific Design Automation Conference, 2009.
-  Proceedings.}, jan. 2009, pp. 811 --816.
+  models,'' in \emph{Proceedings of Asia and South Pacific Design Automation
+  Conference, 2009.}, jan. 2009, pp. 811 --816.
 
 \bibitem{Ben99}
 T.~Simunic \emph{et~al.}, ``Cycle-accurate simulation of energy consumption in
-  embedded systems,'' in \emph{Design Automation Conference, 1999. Proceedings.
-  36th}, 1999, pp. 867 --872.
+  embedded systems,'' in \emph{Proceedings of the 36th Design Automation
+  Conference, 1999.}, 1999, pp. 867 --872.
 
 \bibitem{Hul11}
 J.~Hulzink \emph{et~al.}, ``An ultra low energy biomedical signal processing

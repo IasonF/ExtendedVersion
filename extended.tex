@@ -116,7 +116,7 @@ These calculations are done with simplified assumptions regarding input data and
 \label{sec:related}
 %PGK: Try to find newer examples
 
-Many papers have focused on memory related optimisations, also in the presence of a partitioned and distributed memory organisation with memory blocks of different sizes. In \cite{Ben00b} authors present a methodology for automatic memory hierarchy generation that exploits memory access locality, while in \cite{Ben00c} they propose an algorithm for the automatic partitioning of on-chip SRAM in multiple banks. Several design techniques for designing energy efficient memory architectures for embedded systems are presented in \cite{Mac02}. The current work differentiates by employing a platform that is reconfigurable during run-time. In \cite{Pgk01} a large number of data and memory optimisation techniques, that could be dependent or independent of a target platform, are discussed. Reconfigurable platforms are not considered, however.
+Many papers have focused on memory related optimisations, also in the presence of a partitioned and distributed memory organisation with memory blocks of different sizes. In \cite{Ben00b} authors present a methodology for automatic memory hierarchy generation that exploits memory access locality, while in \cite{Ben00c} they propose an algorithm for the automatic partitioning of on-chip SRAM in multiple banks. Several design techniques for designing energy efficient memory architectures for embedded systems are presented in \cite{Mac02}. The current work differentiates by employing a platform that is reconfigurable during run-time. In \cite{Pgk01} a large number of data and memory optimisation techniques, that could be dependent or independent of a target platform, are discussed. Again, reconfigurable platforms are not considered.
 
 Energy-aware assignment of data to memory banks for several task-sets based on the MediaBench suit of benchmarks is presented in \cite{Mar03}. Low energy multimedia applications are discussed also in \cite{Chu02} with focus on processing rather than the memory platform. Furthermore, both \cite{Mar03} and \cite{Chu02} base their analysis on use case situations and do not incorporate sufficient support for very dynamically behaving application codes. System scenarios alleviate this bottleneck and enable handling of such dynamic behaviour. In addition, the current work explores the assignment of data to the memory and the effect of different assignment decisions on the overall energy consumption.
 
@@ -171,7 +171,7 @@ Other applications have other input variables deciding the memory requirement dy
 
 The next step is the clustering of the profiled memory sizes into groups with similar characteristics. This is referred to as system scenario identification. Clustering is necessary, because it will be extremely costly to have a different scenario for every possible size, due to the number of memories needed. Clustering neighbouring RTSs is a rational choice, because two instances with similar memory needs have similar energy consumption. 
 
-In Fig.~\ref{fig:clustering} the clustering of the previously profiled information is presented. The clustering of RTSs is based both on their distance on the memory size axis and the frequency of their occurrence. Consequently, the memory size is split unevenly with more frequent RTSs having a shorter memory size range. In the case of a clustering to three system scenarios the space is divided in the three differently coloured hashed areas depicted in Fig.~\ref{fig:clustering}. Due to the higher frequency of RTSs in the yellow hashed area that system scenario has a shorter range compared with its neighbouring scenarios. Such clustering is better than an even splitting because the energy cost of each system scenario is defined by the upper size limit, as each scenario should support all RTSs within its range. Consequently the overhead for the RTSs in the yellow area is lower compared to the overhead in the two other areas.
+In Fig.~\ref{fig:clustering} the clustering of the previously profiled information is presented. The clustering of RTSs is based both on their distance on the memory size axis and the frequency of their occurrence. Consequently, the memory size is split unevenly with more frequent RTSs having a shorter memory size range. In the case of a clustering to three system scenarios the space is divided in the three differently coloured hashed areas depicted in Fig.~\ref{fig:clustering}(a). Due to the higher frequency of RTSs in the yellow hashed area, that system scenario has a shorter range compared with its neighbouring scenarios. Such clustering is better than an even splitting because the energy cost of each system scenario is defined by the upper size limit, as each scenario should support all RTSs within its range. Consequently the overhead for the RTSs in the yellow area is lower compared to the overhead in the two other areas.
 
 The same principle applies also when the number of system scenarios is increased to five, as depicted in Fig.~\ref{fig:clustering}(b). The frequency sensitive clustering results in two short system scenarios that contain four RTSs each and three wider system scenarios with lower numbers of RTSs. The number of system scenarios should be kept limited mainly due to two factors. First, implementation of a high number of system scenarios in a memory platform is more difficult and complex. Second, the switching between the different scenarios involves an energy penalty that could become significant when the switching takes place frequently.
 
@@ -307,7 +307,7 @@ The exploration of alternative memory platforms is performed using the steps des
 		\STATE $Database \gets $ memory database
 		\STATE $N \gets $ number of scenarios (up to 5 in this work)
 			\FOR{$i = 1 \to N$}
-				\FOR{for all combinations of i banks in database}
+				\FOR{all combinations of i banks in database}
 				%\STATE $Platform \gets $ i banks from Database
 				\IF{$\sum_{1}^{i} size(bank) \geq  size(max(RTS))$} \STATE{Keep configuration} \ENDIF
 				\STATE Select configuration that minimizes Eq.\ref{eq:energy} for $RTSset$			
@@ -440,7 +440,8 @@ As the number of system scenarios that are implemented on the memory subsystem i
 
 \begin{figure}[!t]
 \centering
-\includegraphics[angle=270, width=0.47\textwidth]{Images/banks.ps}
+%\includegraphics[angle=270, width=0.47\textwidth]{Images/banks.ps}
+\includegraphics[width=0.44\textwidth]{Images/banks2.eps}
 %\psfig{file=Images/banks.ps, angle=270, width=0.47\textwidth}
 \caption{Bank sizes for the most efficient of the tested organisations for each benchmark}
 \label{fig:banks}

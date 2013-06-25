@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  20 JUN 2013 19:20
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  22 JUN 2013 21:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -285,11 +285,8 @@ File: Images/6apps.eps Graphic file (type eps)
  <Images/6apps.eps>
 File: Images/6appsGains.eps Graphic file (type eps)
  <Images/6appsGains.eps> [8]
-File: Images/banks.ps Graphic file (type eps)
- <Images/banks.ps>
-Underfull \vbox (badness 1917) has occurred while \output is active []
-
- [9]
+File: Images/banks2.eps Graphic file (type eps)
+ <Images/banks2.eps> [9]
 File: Images/usecase.eps Graphic file (type eps)
 
 <Images/usecase.eps> (./extended.bbl)
@@ -307,11 +304,11 @@ Before submitting the final camera ready copy, remember to:
 [10] (./extended.aux) ) 
 Here is how much of TeX's memory you used:
  2553 strings out of 493634
- 35705 string characters out of 3143401
+ 35708 string characters out of 3143401
  103217 words of memory out of 3000000
  5832 multiletter control sequences out of 15000+200000
  35688 words of font info for 95 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 32i,14n,24p,2130b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,14n,24p,1848b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (10 pages, 77580 bytes).
+Output written on extended.dvi (10 pages, 77252 bytes).
