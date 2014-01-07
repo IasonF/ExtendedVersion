@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  22 JUN 2013 21:23
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  6 JAN 2014 21:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -16,102 +16,80 @@ iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
 ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
 ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
 .
-(/usr/local/texlive/2011/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
-Document Class: IEEEtran 2007/03/05 V1.7a by Michael Shell
--- See the "IEEEtran_HOWTO" manual for usage information.
--- http://www.michaelshell.org/tex/ieeetran/
-\@IEEEtrantmpdimenA=\dimen102
-\@IEEEtrantmpdimenB=\dimen103
-\@IEEEtrantmpcountA=\count79
-\@IEEEtrantmpcountB=\count80
-\@IEEEtrantmptoksA=\toks14
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 366.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2006/09/13 v1.1m fixes to LaTeX
 
-(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+))
+(/Users/iason/Library/texmf/tex/latex/svjour3.cls
+Document Class: svjour3 2007/05/08 v3.2 
+LaTeX document class for Springer journals
+Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
+(Springer-SVJour3)           not found in option list of \documentclass
+(Springer-SVJour3)           - autoactivating "global" style.
+(/Users/iason/Library/texmf/tex/latex/svglov3.clo
+File: svglov3.clo 2009/12/18 v3.2 style option for standardised journals
+
+SVJour Class option: svglov3.clo for standardised journals
 )
--- Using 210mm x 297mm (a4) paper.
--- Using DVI output.
-\@IEEEnormalsizeunitybaselineskip=\dimen104
--- This is a 10 point document.
-\CLASSINFOnormalsizebaselineskip=\dimen105
-\CLASSINFOnormalsizeunitybaselineskip=\dimen106
-\IEEEnormaljot=\dimen107
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 724.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 724.
-\IEEEilabelindentA=\dimen108
-\IEEEilabelindentB=\dimen109
-\IEEEilabelindent=\dimen110
-\IEEEelabelindent=\dimen111
-\IEEEdlabelindent=\dimen112
-\IEEElabelindent=\dimen113
-\IEEEiednormlabelsep=\dimen114
-\IEEEiedmathlabelsep=\dimen115
-\IEEEiedtopsep=\skip41
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@IEEEsubequation=\count85
-\abovecaptionskip=\skip42
-\belowcaptionskip=\skip43
-\c@figure=\count86
-\c@table=\count87
-\@IEEEeqnnumcols=\count88
-\@IEEEeqncolcnt=\count89
-\@IEEEtmpitemindent=\dimen116
-\c@IEEEbiography=\count90
-\@IEEEtranrubishbin=\box26
-) (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
-\@emptytoks=\toks15
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2009/06/22 v3.00
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 149.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 150.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 151.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 152.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 153.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 155.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 156.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
+\logodepth=\dimen102
+\headerboxheight=\dimen103
+\betweenumberspace=\dimen104
+\aftertext=\dimen105
+\headlineindent=\dimen106
+\c@inst=\count79
+\c@auth=\count80
+\instindent=\dimen107
+\authrun=\box26
+\authorrunning=\toks14
+\titrun=\box27
+\titlerunning=\toks15
+\combirun=\box28
+\c@lastpage=\count81
+\rubricwidth=\dimen108
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\spthmsep=\dimen109
+\c@theorem=\count87
+\c@case=\count88
+\c@conjecture=\count89
+\c@corollary=\count90
+\c@definition=\count91
+\c@example=\count92
+\c@exercise=\count93
+\c@lemma=\count94
+\c@note=\count95
+\c@problem=\count96
+\c@property=\count97
+\c@proposition=\count98
+\c@question=\count99
+\c@solution=\count100
+\c@remark=\count101
+\c@figure=\count102
+\c@table=\count103
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\figcapgap=\dimen110
+\tabcapgap=\dimen111
+\figgap=\dimen112
+\bibindent=\dimen113
+\@tempcntc=\count104
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
@@ -132,20 +110,31 @@ Package graphics Info: Driver file: dvips.def on input line 91.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/dvips.def
 File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\Gin@req@height=\dimen117
-\Gin@req@width=\dimen118
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen119
-\extrarowheight=\dimen120
-\NC@list=\toks17
-\extratabsurround=\skip44
-\backup@length=\skip45
+\col@sep=\dimen116
+\extrarowheight=\dimen117
+\NC@list=\toks18
+\extratabsurround=\skip43
+\backup@length=\skip44
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip46
+\@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -153,56 +142,59 @@ Package: amstext 2000/06/29 v2.01
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks18
-\ex@=\dimen121
+\@emptytoks=\toks19
+\ex@=\dimen118
 ))
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen122
+\pmbraise@=\dimen119
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count91
+\inf@bad=\count105
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count92
-\leftroot@=\count93
+\uproot@=\count106
+\leftroot@=\count107
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count94
-\DOTSCASE@=\count95
+\classnum@=\count108
+\DOTSCASE@=\count109
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
-\Mathstrutbox@=\box27
-\strutbox@=\box28
-\big@size=\dimen123
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen120
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count96
-\c@MaxMatrixCols=\count97
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count110
+\c@MaxMatrixCols=\count111
 \dotsspace@=\muskip10
-\c@parentequation=\count98
-\dspbrk@lvl=\count99
-\tag@help=\toks19
-\row@=\count100
-\column@=\count101
-\maxfields@=\count102
-\andhelp@=\toks20
-\eqnshift@=\dimen124
-\alignsep@=\dimen125
-\tagshift@=\dimen126
-\tagwidth@=\dimen127
-\totwidth@=\dimen128
-\lineht@=\dimen129
-\@envbody=\toks21
-\multlinegap=\skip47
-\multlinetaggap=\skip48
-\mathdisplay@stack=\toks22
+\c@parentequation=\count112
+\dspbrk@lvl=\count113
+\tag@help=\toks20
+\row@=\count114
+\column@=\count115
+\maxfields@=\count116
+\andhelp@=\toks21
+\eqnshift@=\dimen121
+\alignsep@=\dimen122
+\tagshift@=\dimen123
+\tagwidth@=\dimen124
+\totwidth@=\dimen125
+\lineht@=\dimen126
+\@envbody=\toks22
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
-)
-(/usr/local/texlive/2011/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen130
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen127
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
@@ -210,12 +202,12 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@ALC@unique=\count103
-\c@ALC@line=\count104
-\c@ALC@rem=\count105
-\c@ALC@depth=\count106
-\ALC@tlm=\skip49
-\algorithmicindent=\skip50
+\c@ALC@unique=\count117
+\c@ALC@line=\count118
+\c@ALC@rem=\count119
+\c@ALC@depth=\count120
+\ALC@tlm=\skip48
+\algorithmicindent=\skip49
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
@@ -223,92 +215,92 @@ nment
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count107
-\float@exts=\toks23
-\float@box=\box29
-\@float@everytoks=\toks24
-\@floatcapt=\box30
+\c@float@type=\count121
+\float@exts=\toks24
+\float@box=\box31
+\@float@everytoks=\toks25
+\@floatcapt=\box32
 )
-\@float@every@algorithm=\toks25
-\c@algorithm=\count108
+\@float@every@algorithm=\toks26
+\c@algorithm=\count122
 ) (./extended.aux)
 \openout1 = `extended.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 25.
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
- (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+
+Unknown journal: specify \journalname{<name of your journal>} in preambel
+
+SVJour3 warning: Missing \journalname
+LaTeX Font Info:    Try loading font information for U+msa on input line 35.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1
+) [1] [2]
+Overfull \hbox (3.00073pt too wide) in paragraph at lines 87--90
+[]\OT1/cmr/m/n/10 In ad-di-tion, mod-ern ap-pli-ca-tions ex-hibit more and more
+ dy-namic be-haviour,
+ []
 
-
-] [2]
+[3] [4] [5]
 File: Images/profiling2.eps Graphic file (type eps)
-
-<Images/profiling2.eps> [3]
+ <Images/profiling2.eps> [6]
 File: Images/1Dclustering.ps Graphic file (type eps)
- <Images/1Dclustering.ps> [4]
+ <Images/1Dclustering.ps> [7] [8]
 File: Images/2DClustering.eps Graphic file (type eps)
 
-<Images/2DClustering.eps>
+<Images/2DClustering.eps> [9]
 File: Images/switching.eps Graphic file (type eps)
- <Images/switching.eps>
+ <Images/switching.eps> [10]
 File: Images/platform.eps Graphic file (type eps)
- <Images/platform.eps> [5]
-Overfull \hbox (20.58414pt too wide) in alignment at lines 269--280
- [][][] []
+
+<Images/platform.eps> [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+[13] [14] [15]
+Overfull \hbox (8.22285pt too wide) in paragraph at lines 570--574
+\OT1/cmr/m/n/10 The re-quired dy-namism for ap-ply-ing the memory-aware sys-tem
+ sce-nario method-
  []
 
-[6]
-Overfull \hbox (10.72705pt too wide) in paragraph at lines 334--357
-[]  [] 
- []
-
-[7]
+[16]
 File: Images/6apps.eps Graphic file (type eps)
  <Images/6apps.eps>
 File: Images/6appsGains.eps Graphic file (type eps)
- <Images/6appsGains.eps> [8]
+ <Images/6appsGains.eps> [17] [18]
 File: Images/banks2.eps Graphic file (type eps)
- <Images/banks2.eps> [9]
+ <Images/banks2.eps>
+[19]
 File: Images/usecase.eps Graphic file (type eps)
+ <Images/usecase.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<Images/usecase.eps> (./extended.bbl)
-
-** Conference Paper **
-Before submitting the final camera ready copy, remember to:
-
- 1. Manually equalize the lengths of two columns on the last page
- of your paper;
-
- 2. Ensure that any PostScript and/or PDF output post-processing
- uses only Type 1 fonts and that every step in the generation
- process uses the appropriate paper size.
-
-[10] (./extended.aux) ) 
+ [20]
+(./extended.bbl [21]) [22] (./extended.aux) ) 
 Here is how much of TeX's memory you used:
- 2553 strings out of 493634
- 35708 string characters out of 3143401
- 103217 words of memory out of 3000000
- 5832 multiletter control sequences out of 15000+200000
- 35688 words of font info for 95 fonts, out of 3000000 for 9000
+ 2544 strings out of 493634
+ 33435 string characters out of 3143401
+ 93355 words of memory out of 3000000
+ 5812 multiletter control sequences out of 15000+200000
+ 12808 words of font info for 48 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 32i,14n,24p,1848b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,22p,725b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (10 pages, 77252 bytes).
+Output written on extended.dvi (22 pages, 79092 bytes).
