@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  6 JAN 2014 21:32
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  13 JAN 2014 02:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -252,55 +252,69 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 35.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1] [2]
-Overfull \hbox (3.00073pt too wide) in paragraph at lines 87--90
+)
+Underfull \vbox (badness 1286) has occurred while \output is active []
+
+ [1]
+[2]
+Overfull \hbox (3.00073pt too wide) in paragraph at lines 96--99
 []\OT1/cmr/m/n/10 In ad-di-tion, mod-ern ap-pli-ca-tions ex-hibit more and more
  dy-namic be-haviour,
  []
 
-[3] [4] [5]
+[3] [4]
+Underfull \vbox (badness 2181) has occurred while \output is active []
+
+ [5]
+[6]
 File: Images/profiling2.eps Graphic file (type eps)
- <Images/profiling2.eps> [6]
+ <Images/profiling2.eps> [7]
 File: Images/1Dclustering.ps Graphic file (type eps)
- <Images/1Dclustering.ps> [7] [8]
+ <Images/1Dclustering.ps> [8]
 File: Images/2DClustering.eps Graphic file (type eps)
 
 <Images/2DClustering.eps> [9]
 File: Images/switching.eps Graphic file (type eps)
- <Images/switching.eps> [10]
+ <Images/switching.eps> [10] [11]
 File: Images/platform.eps Graphic file (type eps)
 
-<Images/platform.eps> [11]
+<Images/platform.eps> [12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-[13] [14] [15]
-Overfull \hbox (8.22285pt too wide) in paragraph at lines 570--574
+ [13]
+[14] [15]
+Overfull \hbox (8.22285pt too wide) in paragraph at lines 569--573
 \OT1/cmr/m/n/10 The re-quired dy-namism for ap-ply-ing the memory-aware sys-tem
  sce-nario method-
  []
 
 [16]
+Underfull \vbox (badness 8151) has occurred while \output is active []
+
+ [17]
 File: Images/6apps.eps Graphic file (type eps)
- <Images/6apps.eps>
+
+<Images/6apps.eps>
 File: Images/6appsGains.eps Graphic file (type eps)
- <Images/6appsGains.eps> [17] [18]
+ <Images/6appsGains.eps> [18]
 File: Images/banks2.eps Graphic file (type eps)
- <Images/banks2.eps>
-[19]
+ <Images/banks2.eps> [19]
+[20]
 File: Images/usecase.eps Graphic file (type eps)
- <Images/usecase.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ <Images/usecase.eps> [21] [22]
+Underfull \hbox (badness 1163) in paragraph at lines 821--824
+[]\OT1/cmr/m/n/8 Hammari E, et al (2010) Ap-pli-ca-tion of medium-grain mul-ti-
+pro-ces-sor map-ping
+ []
 
- [20]
-(./extended.bbl [21]) [22] (./extended.aux) ) 
+[23] [24] (./extended.aux) ) 
 Here is how much of TeX's memory you used:
- 2544 strings out of 493634
- 33435 string characters out of 3143401
- 93355 words of memory out of 3000000
- 5812 multiletter control sequences out of 15000+200000
- 12808 words of font info for 48 fonts, out of 3000000 for 9000
+ 2551 strings out of 493634
+ 33518 string characters out of 3143401
+ 88356 words of memory out of 3000000
+ 5823 multiletter control sequences out of 15000+200000
+ 12456 words of font info for 47 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 27i,9n,22p,725b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,22p,325b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (22 pages, 79092 bytes).
+Output written on extended.dvi (24 pages, 86280 bytes).

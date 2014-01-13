@@ -1,0 +1,69 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Abraham and Mahlke(1999)}]{abraham1999automatic}
+Abraham SG, Mahlke SA (1999) Automatic and efficient evaluation of memory
+  hierarchies for embedded systems. In: Microarchitecture, 1999. MICRO-32.
+  Proceedings. 32nd Annual International Symposium on, IEEE, pp 114--125
+
+\bibitem[{Chen and Sha(1999)}]{chen1999loop}
+Chen F, Sha EHM (1999) Loop scheduling and partitions for hiding memory
+  latencies. In: Proceedings of the 12th international symposium on System
+  synthesis, IEEE Computer Society, p~64
+
+\bibitem[{Chen and Postula(2000)}]{chen2000synthesis}
+Chen S, Postula A (2000) Synthesis of custom interleaved memory systems. Very
+  Large Scale Integration (VLSI) Systems, IEEE Transactions on 8(1):74--83
+
+\bibitem[{Grun et~al(2000)Grun, Dutt, and Nicolau}]{grun2000mist}
+Grun P, Dutt N, Nicolau A (2000) Mist: An algorithm for memory miss traffic
+  management. In: Proceedings of the 2000 IEEE/ACM international conference on
+  Computer-aided design, IEEE Press, pp 431--438
+
+\bibitem[{Jacob et~al(1996)Jacob, Chen, Silverman, and
+  Mudge}]{jacob1996analytical}
+Jacob BL, Chen PM, Silverman SR, Mudge TN (1996) An analytical model for
+  designing memory hierarchies. Computers, IEEE Transactions on
+  45(10):1180--1194
+
+\bibitem[{Jantsch et~al(1994)Jantsch, Ellervee, Hemani, {\"O}berg, and
+  Tenhunen}]{jantsch1994hardware}
+Jantsch A, Ellervee P, Hemani A, {\"O}berg J, Tenhunen H (1994)
+  Hardware/software partitioning and minimizing memory interface traffic. In:
+  Proceedings of the conference on European design automation, IEEE Computer
+  Society Press, pp 226--231
+
+\bibitem[{Kandemir et~al(2001)Kandemir, Sezer, and
+  Delaluz}]{kandemir2001improving}
+Kandemir M, Sezer U, Delaluz V (2001) Improving memory energy using access
+  pattern classification. In: Proceedings of the 2001 IEEE/ACM international
+  conference on Computer-aided design, IEEE Press, pp 201--206
+
+\bibitem[{Li and Wolf(1999)}]{li1999hardware}
+Li Y, Wolf WH (1999) Hardware/software co-synthesis with memory hierarchies.
+  Computer-Aided Design of Integrated Circuits and Systems, IEEE Transactions
+  on 18(10):1405--1417
+
+\bibitem[{Oshima et~al(1997)Oshima, Sheu, and Jen}]{oshima1997high}
+Oshima Y, Sheu BJ, Jen SH (1997) High-speed memory architectures for multimedia
+  applications. Circuits and Devices Magazine, IEEE 13(1):8--13
+
+\bibitem[{Passes et~al(1995)Passes, Sha, and Chao}]{passes1995multi}
+Passes N, Sha EM, Chao LF (1995) Multi-dimensional interleaving for
+  time-and-memory design optimization. In: Computer Design: VLSI in Computers
+  and Processors, 1995. ICCD'95. Proceedings., 1995 IEEE International
+  Conference on, IEEE, pp 440--445
+
+\bibitem[{Schmit and Thomas(1997)}]{schmit1997synthesis}
+Schmit H, Thomas DE (1997) Synthesis of application-specific memory designs.
+  Very Large Scale Integration (VLSI) Systems, IEEE Transactions on
+  5(1):101--111
+
+\end{thebibliography}
