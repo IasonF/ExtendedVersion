@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  13 JAN 2014 23:19
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  14 JAN 2014 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -253,20 +253,16 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1]
-Overfull \hbox (0.6243pt too wide) in paragraph at lines 61--68
+)
+Underfull \vbox (badness 8056) has occurred while \output is active []
+
+ [1]
+Overfull \hbox (0.6243pt too wide) in paragraph at lines 62--69
 \OT1/cmr/m/n/9.5 ram-e-ters, also called sys-tem knobs. For the memory-aware sy
 s-tem sce-nario method-
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-[4] [5]
+[2] [3] [4] [5]
 File: Images/profiling2.eps Graphic file (type eps)
  <Images/profiling2.eps> [6]
 File: Images/1Dclustering.ps Graphic file (type eps)
@@ -274,16 +270,12 @@ File: Images/1Dclustering.ps Graphic file (type eps)
 Underfull \vbox (badness 1199) has occurred while \output is active []
 
  [8]
-File: Images/2DClustering.eps Graphic file (type eps)
+File: Images/2D.eps Graphic file (type eps)
 
-<Images/2DClustering.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
+<Images/2D.eps> [9]
 File: Images/switching.eps Graphic file (type eps)
-
-<Images/switching.eps>
-Underfull \vbox (badness 4621) has occurred while \output is active []
+ <Images/switching.eps>
+Underfull \vbox (badness 1975) has occurred while \output is active []
 
  [10]
 File: Images/platform.eps Graphic file (type eps)
@@ -293,7 +285,7 @@ Underfull \vbox (badness 2635) has occurred while \output is active []
 
  [12]
 [13]
-Overfull \hbox (4.61855pt too wide) in paragraph at lines 510--514
+Overfull \hbox (4.61855pt too wide) in paragraph at lines 514--518
 \OT1/cmr/m/n/9.5 The ap-pli-ca-tions that ben-e-fit most from the memory-aware 
 sys-tem sce-nario method-
  []
@@ -312,31 +304,35 @@ File: Images/usecase.eps Graphic file (type eps)
 Underfull \vbox (badness 2119) has occurred while \output is active []
 
  [20]
-Underfull \hbox (badness 2644) in paragraph at lines 832--835
+Underfull \hbox (badness 2644) in paragraph at lines 836--839
 []\OT1/cmr/m/n/8 Hammari E, et al (2010) Ap-pli-ca-tion of medium-grain mul-ti-
 pro-ces-sor map-ping
  []
 
 
-Underfull \hbox (badness 1082) in paragraph at lines 832--835
+Underfull \hbox (badness 1082) in paragraph at lines 836--839
 \OT1/cmr/m/n/8 method-ol-ogy to epilep-tic seizure pre-dic-tor. In: NORCHIP, 20
 10, pp 1 --6, DOI 
  []
 
 [21]
-Underfull \hbox (badness 1342) in paragraph at lines 957--960
+Underfull \hbox (badness 1342) in paragraph at lines 961--964
 []\OT1/cmr/m/n/8 Li Y, Wolf WH (1999) Hard-ware/software co-synthesis with mem-
 ory hi-er-ar-chies.
  []
 
-[22] (./extended.aux) ) 
+[22] [23] (./extended.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2565 strings out of 493634
- 33766 string characters out of 3143401
- 92359 words of memory out of 3000000
- 5835 multiletter control sequences out of 15000+200000
+ 2566 strings out of 493634
+ 33755 string characters out of 3143401
+ 93359 words of memory out of 3000000
+ 5836 multiletter control sequences out of 15000+200000
  16038 words of font info for 60 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 27i,9n,22p,325b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,9n,22p,327b,556s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on extended.dvi (22 pages, 87096 bytes).
+Output written on extended.dvi (23 pages, 87832 bytes).

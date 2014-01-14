@@ -40,12 +40,13 @@ We propose a memory-aware system scenario approach that exploits variations in m
 Different system scenarios capture the application's different resource requirements that change dynamically at run-time. 
 In addition to computational resources, the many possible memory platform configurations and data-to-memory assignments are important system scenario parameters. 
 In this work we focus on clustering of different memory requirements into groups and the system scenario generation is presented in detail.
+The clustering is a non-trivial problem due to the high volume of different memory requirements, which leads to a very large exploration space.
 An extended memory model is used as a practical enabler, in order to evaluate the methodology. 
 The memory models includes existing state-of-the-art memories, available from industry and academia, and we show how they are employed during the system design exploration phase. 
 Both commercial SRAM and standard cell based memory models are explored in this study. 
 The effectiveness of the proposed methodology is demonstrated and tested using a large set of multimedia benchmarks published in the Polybench, Mibench and Mediabench suites.
 The broad set of multimedia benchmarks is representative for the entire domain of multimedia applications.
-Reduction in energy consumption in the memory subsystem ranges from 35\% to 55 \% for the chosen set of benchmarks.
+Reduction in energy consumption in the memory subsystem ranges from 35\% to 55\% for the chosen set of benchmarks.
 \keywords{System Scenarios \and Design Space Exploration \and Reconfigurable Design \and Memory Reconfiguration \and Dynamic Multimedia Applications} 
 \end{abstract}
 
@@ -68,9 +69,12 @@ This is followed by experiments with dynamic multimedia applications in order to
 
 The main contribution of the current work is the development of data variable \cite{Elena2012} based system scenarios.
 Previous control variable based system scenarios \cite{Gheorghita2007} are unable to handle the fine-grain behaviour of the studied multimedia applications due to their significant variation under different execution situations. 
-Furthermore, compared with use case scenario approaches in which scenarios are generated based on a user's behaviour, the system scenario methodology focuses on the behaviour of the system to generate scenarios and can, therefore, fully exploit the detailed platform mapping information. 
+Furthermore, compared with use case scenario approaches in which scenarios are generated based on a user's behaviour \cite{usecase}, the system scenario methodology focuses on the behaviour of the system to generate scenarios and can, therefore, fully exploit the detailed platform mapping information. 
 Rather than focusing on the processing cores, this work analyses the application of system scenarios on the memory organisation. 
 More specifically this work focuses on the system scenario identification phase of the methodology.
+The wide range of memory requirements, the amount of different cases and the different frequency in which each case occurs, results in a very large exploration space.
+Therefore, there is a need for developing an algorithmic approach that can efficiently tackle this problem.
+
 Another significant contribution is the extensive number of benchmark applications on which the methodology is applied.
 The chosen set is representative for the entire domain of multimedia applications.
 Furthermore, we present a categorisation of applications based on their dynamic characteristics, which is also applicable to the entire multimedia domain. 
@@ -164,7 +168,7 @@ The authors in \cite{abraham1999automatic}, \cite{jacob1996analytical} and \cite
 Design methods with main focus on the traffic and latencies in the memory architecture are presented in \cite{chen1999loop}, \cite{grun2000mist}, \cite{jantsch1994hardware} and \cite{passes1995multi}.
 Improving memory energy efficiency based on a study of access patterns is discussed in \cite{kandemir2001improving}.
 Application specific memory design is a research topic in \cite{schmit1997synthesis}, while memory design for multimedia applications is presented in \cite{oshima1997high}.
-The current work differentiates by introducing the concept of system scenarios that supports the dynamic handling of application's requirements, although the data mapping is static. 
+The current work differentiates by introducing the concept of system scenarios that supports the dynamic handling of application's requirements, although the data mapping is static inside each scenario. 
 
 An overview of work on system scenario methodologies and their application are presented in \cite{Gheorghita2007}. 
 In \cite{Fil12} extensions towards a memory-aware system scenario methodology are presented and demonstrated using theoretical memory models and two target applications. 
@@ -238,7 +242,7 @@ The memory requirements in each case are driven by the current input image size,
 Depending on the application the whole image or a region of interest is processed. 
 Other applications have other input variables deciding the memory requirement dynamism, e.g., the SNR level on the channel in the case of an encoding/decoding application.
 
-\subsection{Design-time System Scenario Identification and Prediction Based on Data Variables}
+\subsection{Design-time System Scenario Identification Based on Data Variables}
 
 \begin{figure}
 \centering
@@ -286,7 +290,7 @@ Clustering of RTSs using Pareto curves is more accurate compared to the clusteri
 
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{Images/2DClustering.eps}
+\includegraphics[width=0.75\textwidth]{Images/2D.eps}
 \caption{Clustering of Pareto curves}
 \label{fig:pareto}
 \end{figure}
@@ -294,14 +298,14 @@ Clustering of RTSs using Pareto curves is more accurate compared to the clusteri
 The system scenario identification step includes the selection of the data variables that determine the active system scenario. 
 This can be achieved by careful study of the application code, combined with the application's data input.
 The variable selection is done before clustering of RTSs into scenarios.
-Based on the choice of the identification variable, there is a trade-off between the complexity and the accuracy of the scenario prediction step.
+Based on the choice of the identification variable, there is a trade-off between the complexity and the accuracy of the scenario detection step.
 On the one hand, if the identification is done using a group of complex variables and their correlation, there is a number of calculations needed in order to predict the active scenario. 
-On the other hand, if the value of a single variable is monitored for scenario identification, the scenario prediction is straightforward.
-Obviously, the accuracy of the scenario prediction is higher on the first case, while the computational needs for scenario prediction are lower on the second case.
-In other words, the more accurate scenario prediction is, the more resources are used by the run-time manager for prediction.
+On the other hand, if the value of a single variable is monitored for scenario identification, the scenario detection is straightforward.
+Obviously, the accuracy of the scenario detection is higher on the first case, while the computational needs for scenario detection are lower on the second case.
+In other words, the more accurate scenario detection is, the more resources are used by the run-time manager for detection.
 In our case the grey-box model reveals only the code parts that will influence memory usage, so that data variables deciding memory space changes can be identified. 
 An example of this is a non static variable that influences the number of iterations for a loop that performs one memory allocation at each iteration. 
-In the depicted example the system scenario prediction data variable is the input image height and width values. 
+In the depicted example the system scenario detection data variable is the input image height and width values. 
 Moreover, the designer should look for a correlation between input values and the corresponding cost. 
 This information will be useful in the following steps of the methodology \cite{tcm}.
 
@@ -318,7 +322,7 @@ Switching costs are defined by the platform and include all memory energy penalt
 \begin{figure}
 \centering
 \includegraphics[width=0.75\textwidth]{Images/switching.eps}
-\caption{Run-time system scenario prediction and switching based on the current input}
+\caption{Run-time system scenario detection and switching based on the current input}
 \label{fig:runtime}
 \end{figure}
 
@@ -522,7 +526,7 @@ An overview of the benchmark applications that were tested is presented in Tab.~
 {
 \begin{tabular}{|c|c|c|c|}
 \hline
-\textbf{Index} & \textbf{Name} & \textbf{Source} & \textbf{Scenario prediction variable}\\ 
+\textbf{Index} & \textbf{Name} & \textbf{Source} & \textbf{Scenario detection variable}\\ 
 \hline 
 1 & Epic image compression & MediaBench & Image size \\ 
 \hline 
@@ -772,7 +776,7 @@ The memory-aware system scenario methodology is suited for applications that exp
 
 %\bibliographystyle{spbasic}
 %\bibliography{reference.bib}
-\begin{thebibliography}{40}
+\begin{thebibliography}{41}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -973,6 +977,9 @@ Schmit H, Thomas DE (1997) Synthesis of application-specific memory designs.
   Very Large Scale Integration (VLSI) Systems, IEEE Transactions on
   5(1):101--111
  
+\bibitem{usecase}
+Heumann, Jim (2001) Generating test cases from use cases.
+	The rational edge, 6(01)
 
 \end{thebibliography}
 
